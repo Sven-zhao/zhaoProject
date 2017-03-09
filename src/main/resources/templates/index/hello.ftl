@@ -11,5 +11,8 @@
 aabbcc
 ${name!}
 ${prize.title!}
+${one}
+${two}
+${size}
 </body>
 </html>

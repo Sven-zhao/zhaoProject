@@ -7,8 +7,8 @@ import com.zhaoProject.springBoot.service.PrizeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("PrizeService")
-public class PrizeServiceImpl implements PrizeService {
+@Service("PrizeBaseService")
+public class PrizeBaseServiceImpl implements PrizeService {
 
     @Autowired
     PrizeBaseMapper prizeDao;
@@ -25,7 +25,6 @@ public class PrizeServiceImpl implements PrizeService {
 
     @Override
     public int getNum() {
-        return 11;
+        return 22;
     }
-
 }

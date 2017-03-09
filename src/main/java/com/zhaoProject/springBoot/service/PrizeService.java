@@ -7,4 +7,6 @@ public interface PrizeService {
     PrizeBase getOne();
 
     PrizeBase getById(int id);
+
+    int getNum();
 }
