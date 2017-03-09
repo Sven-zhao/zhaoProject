@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Contants {
 
-    @Value("web.domain")
+    @Value("${web.domain}")
     public String webDomain;
 
-    @Value("static.domain")
+    @Value("${static.domain}")
     public String staticDomain;
 
 }
