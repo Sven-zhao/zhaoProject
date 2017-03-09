@@ -9,7 +9,8 @@
 <body>
 <img src="${urls.getForLookupPath('/img/index.jpg')}">
 aabbcc
-${name!}
+${json!}
+${parse!}
 ${prize.title!}
 ${one}
 ${two}

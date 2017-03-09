@@ -1,5 +1,8 @@
 package com.zhaoProject.springBoot.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.zhaoProject.springBoot.domain.PrizeBase;
 import com.zhaoProject.springBoot.service.PrizeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,7 +30,8 @@ public class IndexController {
 
     @RequestMapping("/")
     public String greeting(Model model) {
-        model.addAttribute("prize", prizeService1.getById(2));
+        PrizeBase p = prizeService1.getById(2);
+        model.addAttribute("prize", p);
         model.addAttribute("one", prizeService1.getNum());
         model.addAttribute("two", prizeService2.getNum());
         int rs = 1;
@@ -35,7 +39,10 @@ public class IndexController {
             rs += s.getNum();
         }
         model.addAttribute("size", rs);
-        model.addAttribute("name", "我是超人！");
+        String json = JSON.toJSONString(p);
+        model.addAttribute("json", json);
+        JSONObject parse = JSON.parseObject(json);
+        model.addAttribute("parse", parse.get("title"));
         return "/index/hello";
     }
 }
