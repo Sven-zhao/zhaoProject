@@ -9,7 +9,7 @@ import org.springframework.web.servlet.resource.ResourceUrlProvider;
 import javax.annotation.PostConstruct;
 
 @ControllerAdvice
-public class StaticResourceUrlProvider {
+public class StaticResourceUrlConfig {
 
     @Autowired
     private ResourceUrlProvider resourceUrlProvider;

@@ -10,8 +10,11 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @EnableAutoConfiguration
@@ -44,5 +47,17 @@ public class IndexController {
         JSONObject parse = JSON.parseObject(json);
         model.addAttribute("parse", parse.get("title"));
         return "/index/hello";
+    }
+
+    //    测试session共享
+    @RequestMapping("/uid")
+    @ResponseBody
+    public String uid(HttpSession session) {
+        UUID uid = (UUID) session.getAttribute("uid");
+        if (uid == null) {
+            uid = UUID.randomUUID();
+        }
+        session.setAttribute("uid", uid);
+        return session.getId();
     }
 }

@@ -16,9 +16,9 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
+@SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
-@SpringBootApplication
 @ComponentScan
 @MapperScan("com.zhaoProject.springBoot.dao")
 public class Application {
@@ -45,7 +45,7 @@ public class Application {
         return new DataSourceTransactionManager(dataSource());
     }
 
-    //主函数开始
+    //springBoot主函数开始
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
         logger.info("============= SpringBoot Start Success =============");
