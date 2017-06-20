@@ -1,0 +1,136 @@
+@import '@{static}/modules/base/less/my-normalize';
+@import '@{static}/modules/base/less/mixins';
+@import "./var";
+@import "./mixins";
+
+
+body{
+    background-color: @bg-2;
+}
+
+
+.fade-enter-active,
+.fade-leave-active{
+    opacity:0;
+}
+
+.z-logo{
+    width: 1.89rem/2;
+    height: 1.12rem/2;
+    background: url("@{staticurl}/pagescript/chineseCharacter/base/img/logo.png") no-repeat center bottom;
+    background-size: 100% auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.mask{
+    transition: all .15s linear;
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+
+.choice-area{
+    .halo('m');
+    text-align: center;
+    .display-flex();
+    margin-bottom: .1rem;
+}
+.choice-char{
+    .char('m');
+    text-align: center;
+    margin: 0 auto;
+}
+
+.text-link{
+    color: #fff;
+    font-size: .13rem;
+    text-align: center;
+    padding: .1rem ;
+    margin: .1rem auto;
+    display: table;
+}
+
+.bg-element{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    .bg-line{
+        background: url("@{staticurl}/pagescript/chineseCharacter/base/img/line.png") center center;
+        background-size: 6.77rem/2 3.15rem/2;
+        height: 3.15rem/2;
+        margin-top: .7rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .bg-triangle{
+        background: url("@{staticurl}/pagescript/chineseCharacter/base/img/triangle.png") center center no-repeat;
+        background-size: 6.27rem/2 7.07rem/2;
+        height: 7.07rem/2;
+        margin-top: .45rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.btn{
+    border-radius: 5px;
+    font-size: .15rem;
+    font-weight: 500;
+    text-align: center;
+    height: .38rem;
+    line-height: .38rem;
+    width:420/640*100%;
+    margin: 0 auto;
+    position: relative;
+    transition: .15s ease;
+    &.btn_primary{
+        .bg-gredient('dark');
+        color: #fff;
+    }
+    &.btn_disabled{
+        opacity: .54;
+        background: @bg-2;
+        &:before{
+            .border-onePX(5px,rgba(37, 237, 198, 1));
+        }
+        color: @dc;
+    }
+}
+
+@font-face {
+    font-family:"MFLiHei";
+    src:url("@{staticurl}/pagescript/chineseCharacter/base/font/MFLiHei_Noncommercial-Regular.otf");
+    font-weight: bold;
+}
+
+@media screen and (min-width: 320px) {html{font-size:50px*2;}}
+@media screen and (min-width: 360px) {html{font-size:56.25px*2;}}
+@media screen and (min-width: 375px) {html{font-size:58.59375px*2;}}
+@media screen and (min-width: 400px) {html{font-size:62.5px*2;}}
+@media screen and (min-width: 414px) {html{font-size:64.6875px*2;}}
+@media screen and (min-width: 440px) {html{font-size:68.75px*2;}}
+@media screen and (min-width: 480px) {html{font-size:75px*2;}}
+@media screen and (min-width: 520px) {html{font-size:81.25px*2;}}
+@media screen and (min-width: 560px) {html{font-size:87.5px*2;}}
+@media screen and (min-width: 600px) {html{font-size:93.75px*2;}}
+@media screen and (min-width: 640px) {html{font-size:100px*2;}}
+@media screen and (min-width: 680px) {html{font-size:106.25px*2;}}
+@media screen and (min-width: 720px) {html{font-size:112.5px*2;}}
+@media screen and (min-width: 760px) {html{font-size:118.75px*2;}}
+@media screen and (min-width: 800px) {html{font-size:125px*2;}}
+@media screen and (min-width: 960px) {html{font-size:150px*2;}}

@@ -1,0 +1,54 @@
+@import "@{static}/modules/base/less/page";
+@import "@{static}/modules/base/less/buttons";
+@import "@{static}/pagescript/base/less/base";
+@import "@{static}/pagescript/userinfos/base/less/base";
+
+
+.no-box {
+	border-width: 0 0 1px 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	&:focus {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+}
+
+textarea.form-control {
+	margin-top: 30px;
+	border-radius: 0;
+	height: 200px;
+	.no-box();
+	border-width: 1px 0 1px 0;
+	resize: none;
+}
+
+.btn {
+	margin-top: 22px;
+}
+
+.intro-container {
+	position: relative;
+	margin: 0 10px;
+	.counter {
+		position: absolute;
+		padding: 3px;
+		right: -3px;
+		bottom: 1px;
+		background-color: @bg-1;
+		color: @f3;
+		font-size: 11px;
+	}
+	.self-intro-text {			
+		color: @f1;
+		font-size: 15px;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+}
+
+textarea::-webkit-input-placeholder {    	
+	color: @f3;
+	font-size: 15px;
+}

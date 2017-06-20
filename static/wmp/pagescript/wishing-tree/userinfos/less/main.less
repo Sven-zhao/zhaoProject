@@ -1,0 +1,60 @@
+@import "@{static}/modules/base/less/wx-normalize";
+@import "../../base/less/base";
+@import "@{static}/pagescript/userinfos/basicinfos/less/main";
+
+html {
+	.bg-sky();
+	background-attachment: fixed;
+}
+
+.container {
+	padding-top: 122px;
+	.btn-send-code {
+		color: #694305;
+	}
+	.btn {
+		background-color: #f6c968;
+		border-color: #f6c968;
+	   	color: #fff;
+		&[disabled] {
+			color: fadeOut(#fff,40%);
+		}
+		&:active {
+			background-color: #f6c968;
+			border-color: #f6c968;
+		}
+	}
+
+	.form {
+		label {
+			color: #fff;
+			&.gender {
+				color: #fff;
+			}
+		}
+		.form-control {
+			background-color: transparent;
+		}
+		input {
+			color: #fff;
+		}
+		input[type="radio"] {
+			border-radius: 50%;
+		}
+		select {
+			color: #fff;
+			z-index: 3 !important;
+			background-color: transparent !important;
+		}
+	}
+	padding-top: 59px; 
+	background: url("../img/text-1.png") no-repeat 24px 47px;
+	background-size: 134px 17px;
+}
+.contact {
+	position: static;
+	margin-bottom: 20px;
+	a {
+		color: #f6c968;
+	}
+}

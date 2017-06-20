@@ -1,0 +1,483 @@
+@import "../../base/less/global";
+
+.record{
+    padding: .16rem;
+}
+
+.jj-change{
+    font-size: .14rem;
+    color: #fff;
+    float: left;
+    position: relative;
+    padding-right: .2rem;
+    padding-bottom: .2rem;
+    .display-flex();
+    span{
+        vertical-align: middle;
+        line-height: 1;
+    }
+    &:after{
+        content: "";
+        display: inline-block;
+        background: url("@{staticurl}/pagescript/audioBless/base/img/refish.png") no-repeat center center;
+        background-size: 100% auto;
+        width: .28rem/2;
+        height: .32rem/2;
+        vertical-align: middle;
+        margin-left: .02rem
+    }
+}
+
+.jd-detail{
+    font-size: .13rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, .7);
+    float: right;
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:-.4rem;
+        width: .4rem;
+        background: url('@{staticurl}/pagescript/audioBless/base/img/jd-gold.png') no-repeat center center;
+        background-size: auto 100%;
+    }
+}
+
+.jj-type{
+    margin: .18rem auto;
+    width: 1.66rem;
+    height: 2.65rem;
+    img {
+        width: 100%;
+    }
+}
+
+.record-tips{
+    width: 1.70rem;
+    padding-top: .68rem;
+    background: url('../../base/img/record_text.png') no-repeat;
+    background-size: 100% auto;
+    margin:  0 auto .04rem;
+}
+
+.record-btn{
+    width: 2.2rem;
+    height: .6rem;
+    border-radius: .08rem;
+    text-align: center;
+    line-height: .6rem;
+    margin: 0 auto;
+    .display-flex();
+    padding: 0 .18rem;
+    span {
+        font-size: .18rem;
+        color: @copper;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+
+    }
+    &.record-btn_primary{
+        background-color: @pale;
+        box-shadow: inset -.04rem -.04rem 0 0 #edd98d;
+    }
+    &.record-btn_hold{
+        background-color: #f0da89;
+        box-shadow: inset .04rem .04rem 0 0 #b79e3c;
+        span{
+            -webkit-transform: translate3d(.02rem,.02rem,0);
+            transform: translate3d(.02rem,.02rem,0);
+        }
+    }
+    &.record-btn_short{
+        width: 1.94rem;
+    }
+}
+
+.play-icon{
+    .voice-icon(.14rem;#B5622E);
+}
+
+.play-box{
+    // position: relative;
+    // width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    &.play-box_shot{
+        width: 1.94rem;
+    }
+}
+
+.play-reset{
+    color: #fff;
+    font-size: .16rem;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    height: .6rem;
+    line-height: .6rem;
+    padding: 0 .1rem;
+}
+
+.voice-icon(@b,@color){
+    width: @b *1.2;
+    height: @b *1.2;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    >span{
+        display: block;
+        box-sizing: border-box
+    }
+    .sonic-1{
+        @s1b : @b * .28 * 2;
+        width: @s1b;
+        height: @s1b;
+        background-color: @color;
+        border-radius: 50%;
+        position: absolute;
+        top: -@s1b/2;
+        left: -@s1b/2;
+    }
+    .sonic-2{
+        @s2b : @b * .32 ;
+        width: @s2b *2 *2;
+        height: @s2b *2 *2;
+        border: @b*.2 solid @color;
+        border-radius: 50%;
+        position: absolute;
+        top: -@s2b *2 ;
+        left: -@s2b *2 ;
+    }
+    .sonic-3{
+        @s3b : @b * .5 ;
+        width: @s3b *2 *2;
+        height: @s3b *2 *2;
+        border: @b*.2 solid @color;
+        border-radius: 50%;
+        position: absolute;
+        top: -@s3b *2 ;
+        left: -@s3b *2 ;
+    }
+    &.play{
+        -webkit-animation-name: play;
+        animation-name: play;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+}
+
+.handler-box{
+    margin: .2rem auto;
+    width: 100%;
+    font-size: 0;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+.share-tips{
+    font-size: .14rem;
+    color: rgba(255,255,255,.8);
+    text-align: center;
+    margin: 0 auto;
+    .display-flex();
+
+    &:after{
+        content: "";
+        display: inline-block;
+        background: url("@{staticurl}/pagescript/audioBless/base/img/forward.png") no-repeat center center;
+        background-size: 100% auto;
+        width: .14rem/2;
+        height: .26rem/2;
+        margin-left: .04rem;
+    }
+}
+
+.footer-text{
+    display: table;
+    margin: 0 auto;
+}
+
+.jd-list{
+    background-color:#fff;
+    border-radius: .08rem;
+    position: absolute;
+    top: .5rem;
+    left: .24rem;
+    right: .24rem;
+    bottom: 1rem;
+    padding: .2rem;
+    .jd-close{
+        background: url('@{staticurl}/pagescript/audioBless/base/img/mask-close.png') no-repeat center center;
+        background-size: 100% auto;
+        width: .42rem;
+        height: .42rem;
+        position: absolute;
+        bottom: -.5rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .jd-item{
+        position: relative;
+        padding: .12rem 0;
+        &:after{
+            .t-line(1px);
+        }
+    }
+    .jd-count{
+        float: right;
+        width: .6rem;
+        text-align: right;
+        font-size: 20px;
+        font-weight: 600;
+        color: @macaroni-and-cheese;
+        > * {
+            vertical-align: middle;
+        }
+        .jd-egg{
+            background: url("@{staticurl}/pagescript/audioBless/base/img/jd-gold.png") no-repeat center center;
+            background-size: 100% auto;
+            width: .36rem/2;
+            height: .58rem/2;
+            display: inline-block;
+            &.jd-egg_hasVoice{
+                background-image: url("@{staticurl}/pagescript/audioBless/base/img/jd-red.png");
+            }
+        }
+    }
+    .jd-title{
+        color: @copper;
+        font-size: .14rem;
+        padding: .1rem 0 .26rem .44rem;
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: .16rem;
+            left:0rem;
+            width: .4rem;
+            background: url('@{staticurl}/pagescript/audioBless/base/img/jd-gold.png') no-repeat center center;
+            background-size: auto 100%;
+            -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+        }
+    }
+    .scroller{
+        max-height: 100%;
+        overflow: scroll;
+        // -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: .6rem;
+        border-radius: .08rem;
+        background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.0), #ffffff);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0), #ffffff);
+    }
+}
+
+.person-info{
+    .display-flex();
+}
+
+.person-text{
+    .flex(1);
+    min-width: 0;
+}
+
+.person-ntext{
+    max-width: 9em;
+    display: inline-block;
+    .line-overflow(1);
+}
+
+.person-avatar{
+    .avatar(.48rem,0);
+    margin-right: .1rem;
+}
+
+.person-name{
+    font-size: .16rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: rgba(0, 0, 0, 0.87);
+    .display-flex();
+    .icon-identify{
+        .icon-identify-with-inline();
+    }
+}
+
+.person-title{
+    font-size: .14rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: @black-54;
+    .line-overflow(1);
+}
+
+.logo{
+    margin: 0;
+}
+
+.user-avatar{
+    .avatar(.48rem);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .2rem;
+}
+
+.addjd{
+    width: .6rem;
+    height: .6rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .14rem;
+    position: relative;
+}
+.jd-icon{
+    background: url('../../base/img/jd.png') no-repeat center bottom;
+    background-size: auto 96%;
+    width: .6rem;
+    height: .82rem;
+    margin-top: -.08rem;
+    display: block;
+    position: absolute;
+    &.shot{
+        z-index: -1;
+    }
+}
+
+.listen-tips{
+    width: 1.70rem;
+    padding-top: .68rem;
+    background: url('../../base/img/listen_text.png') no-repeat;
+    background-size: 100% auto;
+    margin:  0 auto .04rem;
+    font-size: 0;
+    position: relative;
+    .name{
+        font-size: .16rem;
+        color: #fff5cf;
+        position: absolute;
+        bottom: .04rem;
+        right: 70%;
+        font-weight: 400;
+        white-space: nowrap;
+        text-align: right;
+        width: 6em;
+        line-height: 1;
+        .line-overflow(1);
+    }
+}
+
+.add-tips{
+	background-color: rgba(0, 0, 0, 0.3);
+    width: .76rem;
+    height: .24rem;
+    .display-flex();
+    border-radius: .05rem;
+    position: absolute;
+    left: -.08rem;
+    top: -.25rem;
+    span{
+        color:  rgba(255, 245, 207, .7);
+        font-size: .1rem;
+        text-align: center;
+        width: 100%
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: -.04rem;
+        left: 50%;
+        -webkit-transform: translateX(-.04rem);
+        transform: translateX(-.04rem);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: .04rem .04rem 0 .04rem;
+        border-color: rgba(0, 0, 0, 0.3) transparent transparent transparent;
+    }
+}
+
+
+.recording-tips{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1.8rem;
+    height: 1.8rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &.recording-tips_primary{
+        -webkit-animation-name: recording;
+        animation-name: recording;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+    &.recording-tips_cancel{
+        background-image: url("/static/wmp/pagescript/audioBless/base/img/record_back.png");
+    }
+}
+
+.share-board-box{
+    position: absolute;
+    top: .3rem;
+    left: 7%;
+    right: 7%;
+    padding: .35rem 0;
+    text-align: center;
+    background: #fff;
+    border-radius: .08rem;
+    .text{
+        font-size: .17rem;
+        line-height: 1.3;
+        color: #1e1e1e;
+    }
+    .tips{
+        color: #6b6b6b;
+        font-size: .14rem;
+        line-height: 1;
+    }
+    .ikon{
+        margin: .2rem auto;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: -.14rem;
+        right: .14rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 .15rem .15rem .15rem;
+        border-color: transparent transparent #fff transparent;
+    }
+}

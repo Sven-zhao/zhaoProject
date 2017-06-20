@@ -1,0 +1,104 @@
+@import "@{static}/pagescript/comment/base/less/base";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/qr";
+@import "@{static}/modules/base/less/bg";
+@import "@{static}/modules/base/less/profile";
+
+.bg.bg-full {
+    background-image: data-uri('../img/img_invite_header_bg.png');    
+}
+
+.container {
+    padding: 15px 15px 20px;
+}
+
+.main {
+    margin: 0 0 25px;
+    padding: 20px 0 10px;
+    background: fade(@bg-1,15);
+    .profile-v {
+        padding: 0 15px;
+        .portrait {
+            width: 76px;
+            height: 76px;
+            border: 3px solid fade(@bg-1,30);
+        }
+        .name {
+            margin: 10px 0 10px;
+            font-size: 17px;
+            color: @bg-1;
+            text-shadow: 0 1px 1px fade(@bg-3,50);
+        }
+        .title {
+            font-size: 13px;
+            color: fade(@bg-1,70);
+        }
+    }
+    .intro {
+        margin-top: 15px;
+        padding: 0 15px;
+        hr {
+            border-bottom: 1px solid fade(@bg-1, 40%);
+            &+hr {
+                margin-top: 1px;
+            }
+        }
+        .profile-h {
+            margin: 20px 0 0;
+            padding-left: 48px;
+            .portrait {
+                width: 40px;
+                height: 40px;
+            }
+            .name {
+                font-size: 13px;
+                color: @bg-1;
+                max-width: 75px;
+            }
+            .title {
+                font-size: 12px;
+                color: fade(@bg-1,80);
+            }
+        }
+        .comment-content {
+            line-height: 1.2;
+            color: @bg-1;
+            font-size: 15px;
+            word-break: break-all;
+            &:before {
+                margin: 10px 0;
+                content: '';
+                display: block;
+                width: 12px;
+                height: 10px;
+                background: data-uri('../img/img_mark_a.png') no-repeat;
+                background-size: 100%;
+            }
+            &:after {
+                content: '';
+                display: block;
+                margin-top: 10px;
+                height: 10px;
+                background: data-uri('../img/img_mark_b.png') no-repeat right bottom;
+                background-size: auto 100%;
+            }
+        }
+    }
+}
+.logo {
+        margin: 20px auto;
+        width: 50px;
+        height: 20px;
+        background: data-uri('../img/img_logo_zhisland.png') no-repeat;
+        background-size: 100%;
+}
+
+.btn span {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: text-top;
+}

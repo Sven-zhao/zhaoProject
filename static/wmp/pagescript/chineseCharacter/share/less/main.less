@@ -1,0 +1,141 @@
+@import "../../base/less/global";
+
+.share{
+    background-image:url("@{staticurl}/pagescript/chineseCharacter/base/img/bg-bottom.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    .bg-element,
+    .wrapper{
+        -webkit-transition: .15s ease-in;
+        transition: .15s ease-in;
+    }
+    &.share_back{
+        .bg-element,
+        .wrapper{
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+        }
+    }
+}
+
+.wrapper{
+    padding-top: .1rem;
+}
+
+.share-title{
+    font-family: "MFLiHei";
+    font-size: .12rem;
+    .bg-gredient('light');
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+
+
+.share-card{
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 0 .25rem .15rem;
+    padding: 0 .18rem.18rem;
+    .card-avatar-outside{
+        position: relative;
+        display: table;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding: 3px;
+        &:before{
+            .border-onePX(50%,rgba(255,255,255,.3),6px);
+        }
+    }
+    .card-avatar{
+        .avatar(.45rem,.16rem);
+        background-color: #ccc;
+        display: block;
+    }
+    .card-inscribe{
+        text-align: right;
+    }
+    .card-comment{
+        font-size: .15rem;
+        font-weight: 300;
+        line-height: 1.33;
+        text-align: justify;
+        color: @f1;
+        margin-bottom: .34rem;
+    }
+    .card-name,
+    .card-position{
+        font-size: .13rem;
+        font-weight: 300;
+        color: @f1;
+        line-height: 1.3;
+    }
+    .card-date{
+        color: @f2;
+        font-size: .12rem;
+    }
+}
+
+.share-popup{
+    width: 2.4rem;
+    margin: 0 auto;
+    margin-top: .6rem;
+    position: relative;
+    .popup-top{
+        width: 100%;
+        height: 1.6rem;
+        background: url("../../base/img/popup-top.jpg") no-repeat center top;
+        background-size: 100% auto;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        .display-flex();
+        .char('m');
+        > span{
+            margin: -.02rem auto 0;
+        }
+    }
+    .popup-bottom{
+        background-color: #fff;
+        width: 100%;
+        color: @f1;
+        font-size: .15rem;
+        padding: .13rem .13rem .25rem;
+        text-align: center;
+        border-bottom-left-radius:6px;
+        border-bottom-right-radius:6px;
+    }
+    .share-icon{
+        width: .18rem;
+        height: .18rem;
+        background: url("../../base/img/share-icon.png") no-repeat center top;
+        background-size: auto 100%;
+        position: absolute;
+        top: -.25rem;
+        right: -.1rem;
+    }
+}
+
+.fixed-bottom-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: .4rem;
+    line-height: .16rem;
+    .bg-gredient('light');
+    font-size: .13rem;
+    color: #fff;
+    padding: .12rem .1rem;
+    .fixed-bottom-bar-btn {
+        background-color: rgba(0, 0, 0, .36);
+        font-size: .12rem;
+        color: #fff;
+        font-weight: 300;
+        float: right;
+        padding: 0 .065rem;
+        text-align: center;
+        border-radius: .12rem;
+    }
+}

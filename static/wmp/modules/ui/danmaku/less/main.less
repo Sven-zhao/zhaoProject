@@ -1,0 +1,54 @@
+@import "@{static}/modules/base/less/my-normalize.less";
+
+.tag-danmaku{
+    padding: 14px 0;
+    background: #F2F1F0;
+    position: relative;
+    &:after{
+        .b-line;
+    }
+    .tag-danmaku-title{
+        margin: 0 16px;
+        line-height: 1em;
+        font-size: .16rem;
+        color: #6B6B6B;
+        font-weight: 400;
+    }
+    .tag-danmaku-stage{
+        margin-top: 14px;
+        height: 32px*2+10;
+        position: relative;
+        overflow: hidden;
+    }
+    .tag-danmaku-item{
+        .display-flex;
+        &.animated{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: auto;
+            white-space: nowrap;
+        }
+    }
+    .tag-danmaku-avatar{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 4px;
+        background-position: 50% 50%;
+		background-size: cover;
+        &>img{
+            width: 100%;
+        }
+    }
+    .tag-danmaku-tag{
+        background: #fff;
+        font-size: .14rem;
+        color: #56ABE4;
+        border-radius: 8px;
+        padding: 6px 14px;
+        line-height: 1em;
+        margin-left: 4px;
+    }
+}

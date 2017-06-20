@@ -1,0 +1,75 @@
+@import "@{static}/pagescript/forum/base/less/base";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/bg";
+@import "@{static}/modules/ui/showMsg/less/complete";
+@import "@{static}/pagescript/comment/base/less/base";
+
+.bg.bg-full {
+    background-color: @bg-3;
+    z-index: 0;
+}
+
+.container {
+    padding: 40px 15px 0;
+    background-color: @bg-3;
+    z-index: 2;
+}
+
+section {
+    .lable {
+        margin: 0;
+        font-size: 15px;
+        color: @bg-1;
+        text-shadow: 0 1px 1px fade(@bg-3, 50%);
+        span {
+            color: @sc;            
+        }
+    }
+    textarea, .relationShip {
+        .font-main();
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    textarea {
+        margin: 13px 0 25px;
+        height: 160px;
+    }
+    .relationShip {        
+        margin: 13px 0 0;
+        height: 38px;
+    }
+    .error-msg {
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        color: @ac;
+        text-align: center;
+    }
+}
+
+footer {
+    width: 48px;
+    height: 19px;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    background: data-uri('../img/img_logo.png') no-repeat center center;
+    background-size: 100%;
+    z-index: 1;
+}
+
+.complete-msg-box {
+    .msg-container {
+        background-color: fade(@sc,90%);
+        .msg {
+            &:before {
+                background-image: data-uri("../img/img_check_success.png");
+            }
+        }
+    }
+}

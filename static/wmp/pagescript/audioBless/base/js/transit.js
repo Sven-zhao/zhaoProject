@@ -1,0 +1,2 @@
+;/*!src/transit/main.js*/
+Vue.config.devtools=!0;var app=new Vue({el:".container",data:{rate:0,unitTime:50},methods:{addRate:function(){var t=this,e=function(){++t.rate<100?setTimeout(function(){e()},t.unitTime):window.location.href=nextHref};e()}},mounted:function(){this.addRate()}});

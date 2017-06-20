@@ -1,0 +1,87 @@
+/**
+ * base.css
+ * @fileOverview CSS核心，为移动端提供最基础，最核心底层样式
+ * @author 天涯浅唱
+ * @qq 122452357
+ * @version 1.0
+ * @date 2016-09-10
+ * @remark Wang Yunhong -- The love of my life.
+ * Copyright (c) 2016-2016 天涯浅唱
+ */
+/* reset */
+article,aside,details,dialog,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}pre,textarea{overflow:auto}html,img,legend{border:0}html,body{height:100%}html{margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}a,abbr,acronym,address,article,aside,blockquote,body,caption,code,dd,del,dfn,dialog,div,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,legend,li,nav,object,ol,p,pre,q,section,span,tbody,td,tfoot,th,thead,ul{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}body{width:10rem;margin:0 auto;color:#333;background:#fff}img{vertical-align:bottom}::-webkit-input-placeholder{color:#999}:-moz-placeholder{color:#999}::-moz-placeholder{color:#999}:-ms-input-placeholder{color:#999}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}textarea{resize:none}a:active,a:hover,button:focus,input:focus,select:focus,textarea:focus{outline:0}input::-ms-clear{display:none}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0;blr:expression(this.onFocus=this.blur());text-decoration:none}a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}abbr[title]{border-bottom:1px dotted}em,strong{font-weight:400;font-style:normal}dfn{font-style:italic}mark{color:#000;background:#ff0}small{font-size:80%}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 1.066667rem}hr{height:0;-moz-box-sizing:content-box;box-sizing:content-box}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{margin:0;font:inherit}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input[type=checkbox],input[type=radio],input[type=file]{box-sizing:border-box;padding:0;border:none}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}input:not([type]),input[type=text],input[type=email],input[type=password],input[type=tel],input[type=url] select,input[type=number]{vertical-align:middle;line-height:normal}input,select,span{display:inline-block}optgroup{font-weight:700}table{border-spacing:0;border-collapse:collapse}dl,ol,ul{list-style:none}
+ /* display */
+.dn {display: none;}
+.di {display: inline;}
+.db {display: block;}
+.dib {display: inline-block;}
+/* font-family number english */
+.fh{font-family: Helvetica}
+/* font-style */
+.n {font-weight: normal;font-style: normal;white-space: normal;}
+.b {font-weight: bold;}
+.i {font-style: italic;}
+/* text-align */
+.tc {text-align: center;}
+.tr {text-align: right;}
+.tl {text-align: left;}
+.tj {text-align: justify;}
+/* text-decoration */
+.tdl {text-decoration: underline;}
+.tdn,
+.tdn:hover,
+.tdn a:hover,
+a.tdl:hover {text-decoration: none;}
+/* letter-spacing */
+.lt0 {letter-spacing: 0;}
+/* white-space */
+.nowrap {white-space: nowrap;}
+/* word-wrap */
+.bk {word-wrap: break-word;}
+/* vertical-align */
+.vm {vertical-align: middle;}
+.vtb {vertical-align: text-bottom;}
+.vb {vertical-align: bottom;}
+.vt {vertical-align: top;}
+/* float */
+.l {float: left;}
+.r {float: right;}
+/* clear */
+.cl {clear: both;}
+/* position */
+.rel {position: relative;}
+.abs {position: absolute;}
+.fixed {position: fixed;}
+/*z-index*/
+.zx1 {z-index: 1;}
+.zx2 {z-index: 2;}
+.zx999 {z-index: 999;}
+/* cursor */
+.poi {cursor: pointer;}
+.def {cursor: default;}
+/* overflow */
+.ovh {overflow: hidden;}
+.ova {overflow: auto;}
+/* fgbility */
+.vh {visibility: hidden;}
+.vv {visibility: visible;}
+/* opacity */
+.opa0 {opacity: 0;filer: alpha(opacity=0);}
+/* block element horizontal center */
+.auto {margin-left: auto;margin-right: auto;}
+/* base on display:table-cell adaptive */
+.cell {display: table-cell;*display: inline-block;width: 2000px;*width: auto;}
+/* single line word overflow using ... replace*/
+.ell {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+/* css3 transition animation effect */
+.trans {-webkit-transition: all .3s;transition: all .3s;}
+/* indefinite elements vertical center */
+.dib_vm {display: inline-block;width: 0;height: 100%;vertical-align: middle;}
+/* text box without borders */
+.bd_none {border: 0;outline: none;}
+/* absolute positioning to hidden */
+.abs_out {position: absolute;left: -999em;top: -999em;}
+/* absolute positioning to clip */
+.abs_clip {position: absolute;clip: rect(0 0 0 0);}
+/* button disabled */
+.disabled {outline: 0 none;cursor: default!important;opacity: .4;filer: alpha(opacity=40);pointer-events: none;}

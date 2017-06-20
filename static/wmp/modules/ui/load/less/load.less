@@ -1,0 +1,27 @@
+.loading {
+	position: fixed;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	.animation {
+		-webkit-transition: -webkit-transform 0.5s;
+		@-webkit-keyframes sbin {
+			from {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			to {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+		width: 28px;
+		height: 28px;		
+		margin: 0 auto;
+		background: no-repeat center center data-uri("@{static}/pagescript/org-admin/base/img/img-loading.png");
+		background-size: contain;
+		-webkit-animation: sbin 1s infinite linear;
+		-webkit-animation-fill-mode: both;
+	}
+}

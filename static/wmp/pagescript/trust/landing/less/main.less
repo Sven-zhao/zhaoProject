@@ -1,0 +1,116 @@
+@import "@{static}/modules/base/less/my-normalize.less";
+@import "@{static}/pagescript/trust/base/less/base.less";
+@import "@{static}/modules/ui/usertype/less/mod";
+
+html{
+    height: 100%;
+}
+.landing{
+    background: url('../../base/img/bgfonts.png') no-repeat @main-color;
+    background-position: 0 290px;
+}
+
+.my-card-avatar {
+	.avatar-with-type-icon(16px);
+}
+
+.bubble {
+	.avatar {
+		.avatar-with-type-icon(16px);
+		overflow: visible !important;
+		[class^="icon"]	{
+			z-index: 1;
+		}
+	}
+}
+
+.header{
+    padding: 0.1px 0;
+}
+
+.qrcode-box{
+    background: #fff;
+    border-radius: 8px;
+    margin: 24px 8.5%;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 8%);
+    overflow: hidden;
+    .qrcode-title{
+        font-size: .18rem;
+        color: #111;
+        margin-bottom: 30px;
+        font-weight: 400;
+        line-height: 1em;
+    }
+    .qrcode-title-big{
+        margin: -30px -30px 40px;
+        padding: 25px;
+        font-weight: 400;
+        font-size: .18rem;
+        color: #fff;
+        background: @red-color;
+    }
+    .qrcode-tips{
+        font-size: .13rem;
+        color: #6B6B6B;
+        margin-bottom: 8px;
+        line-height: 1em;
+    }
+    .qrcode-pic{
+        margin: 0 auto 10px;
+        width: 160px;
+        height: 160px;
+    }
+}
+
+.my-card-title {
+	margin-top: 9px !important;
+}
+
+.begin-box{
+    padding: .1px 0;
+    margin-top: 15px;
+    text-align: center;
+    .begin-inset-pic{
+        margin: 0 auto 22px;
+        max-width: 130px;
+    }
+    .begin-tips{
+        font-size: .14rem;
+        color: #fff;
+        margin: 0;
+        line-height: 1em;
+        margin-bottom: 10px
+    }
+}
+
+.bubble{
+    .msg-bubble;
+    margin:25px 16px ;
+}
+
+.invitation-box{
+    padding: 0.1px;
+    margin-top: 24px;
+    .invitation-card{
+        margin: 0 32px;
+        .invitation-card-content{
+            background: url('../img/invitation-card.png') no-repeat;
+            background-size: 100% auto;
+            padding-top: 73.81%;
+            position: relative;
+            .invitation-card-info{
+                position: absolute;
+                bottom:20%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 0 auto;
+                font-size: .18rem;
+                color: @red-color;
+            }
+        }
+        margin-bottom: 80px;
+    }
+}

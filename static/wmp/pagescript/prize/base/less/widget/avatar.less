@@ -1,0 +1,10 @@
+@import "@{static}/modules/ui/usertype/less/main";
+.avatar(@size:72px,@iconSize:20px){
+    width: @size;
+    height: @size;
+    background-size:cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    .avatar-with-type-icon-onside(@iconSize,@size/2);
+}

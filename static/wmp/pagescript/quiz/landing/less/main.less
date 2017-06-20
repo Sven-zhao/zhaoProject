@@ -1,0 +1,60 @@
+@import "@{static}/modules/base/less/wx-normalize";
+@import "@{static}/pagescript/quiz/base/less/base";
+@import "@{static}/modules/base/less/btns";
+
+@bgHeight: 504;
+
+html {
+	background-color: @bgImg;
+}
+
+.container {
+	padding: 0;
+	img {
+		display: block;
+	}
+}
+.bg {
+	width: 100%;
+}
+
+.fixed-footer {
+	position: absolute;
+	//top: 378px;
+	.percentage(378, @bgHeight,top);
+	left: 0;
+	right: 0;
+	z-index: 10;
+	.set-qeustion {			
+		width: 75%;
+		margin: 0 auto;
+		.btn {
+			font-size: 17px;
+			font-weight: 700;
+			box-shadow: 0 0 3px @bg-1;
+			-webkit-box-shadow: 0 0 3px @bg-1;
+		}
+	}
+}
+
+.qr {
+	position: absolute;
+	//top: 368px;
+	.percentage(368, @bgHeight,top);
+	left: 0;
+	right: 0;
+	z-index: 2;
+	.qr-text {
+			margin: 0px;
+			font-size: 12px;
+			color: fade(@bg-1, 50%);
+			text-align: center;
+		}
+		img {
+			width: 90px;
+			height: 90px;
+			display: block;
+			margin: 0 auto;
+			margin-top: 8px;
+		}
+}

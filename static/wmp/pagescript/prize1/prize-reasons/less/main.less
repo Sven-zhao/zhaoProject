@@ -1,0 +1,153 @@
+@import "@{static}/pagescript/prize1/base/less/base";
+@import "@{static}/modules/base/less/my-normalize";
+@import "@{static}/modules/ui/usertype/less/main";
+@import "@{static}/modules/base/less/variables";
+@import "@{static}/modules/ui/showMsg/less/main";
+@import "@{static}/modules/ui/loading/less/mod";
+@import "@{static}/common/bootstrap-3.3.5/less/mixins/vendor-prefixes";
+
+@prize-base-img-url: "@{staticurl}/pagescript/prize1/base/img";
+
+.banner {
+	.ribbon_gold();
+	width: 318px;
+	margin: 34px auto 0;
+}
+
+.wrapper{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	.backgroundImage(3);
+}
+
+.roller{
+	padding: 1px;
+	min-height: 100%;
+}
+
+.reason-list {
+	position: relative;
+}
+
+.loading {
+	top: auto;
+	bottom: 20px;
+}
+
+.ellipsis {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.award{
+	.golden-rect-with-crown();
+	width: 168px;
+	height: 180px;
+	margin: 35px auto 0;
+	padding-top: 19px;
+	text-align: center;
+	.avatar {
+		.avatar();
+	}
+	.name {
+		font-size: 16px;
+		font-weight: 500;
+		height: 20px;
+		line-height: 20px;
+		color: #000;
+		margin-top: 12px;
+		.ellipsis;
+	}
+	.other-info {
+		font-size: 12px;
+		color: rgba(0, 0, 0, 0.54);
+		.ellipsis;
+		&:nth-child(3) {
+			margin-top: 5px;
+		}
+	}
+}
+
+.reason {
+	position: relative;
+	padding: 16px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 0 16px 8px;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: transparent;
+		z-index: 1;
+	}
+	&:last-child {
+		margin-bottom: 47px;
+	}
+	.content {
+		margin-top: 12px;
+		font-size: 16px;
+		line-height: 1.3;
+		color: rgba(0, 0, 0, 0.87);
+		text-align: justify;
+	}
+	.presenter {
+		position: relative;
+		padding: 0 0 8px 40px;
+		.avatar {
+			.avatar(32px,14px);
+			position: absolute;
+			left: 0;
+		}
+		.name {
+			font-size: 15px;
+			height: 18px;
+			color: #1e1e1e;
+			.ellipsis;
+		}
+		.info {
+			font-size: 12px;
+			height: 14px;
+			color: rgba(0, 0, 0, 0.54);
+			.ellipsis;
+		}
+		border-bottom: solid 1px #cecece;
+	}
+}
+
+.empty-prompt {
+	display: none;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	.prompt-text {
+		margin: 15px 0 70px;
+	}
+	.rank-btn {
+		.btn();
+		margin-top: 6px;
+	}
+	.btn-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 56px;
+		background-color: rgba(255, 255, 255, 0.5);
+		box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+	}
+}
+
+.header {
+	.ribbon_purple();
+	margin-top: 20px;
+}

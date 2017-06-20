@@ -1,0 +1,99 @@
+@import "@{static}/pagescript/wishing-tree/base/less/base"; 
+@import "@{static}/modules/ui/showMsg/less/main"; 
+html {
+	height: 100%;
+	overflow: hidden;
+	.bg-sky();
+}
+
+@anim-time: 0.5s;
+
+.content-wrap {
+	box-sizing: border-box;
+	// .toR(padding-top,24);
+	// .toR(padding-bottom,50);
+	position:fixed;
+	.pos(0,0,0,0);
+	.toR(top,24);
+	.toR(bottom,50);
+	background-attachment: fixed;
+	overflow: hidden;
+	height: 100%;
+}
+
+.user-info {
+	.toR(top,10);
+}
+
+.btn-wrap {
+	transition: 1s 1s;
+	position: fixed;
+	.toR(bottom,20);
+	left: 0;
+	right: 0;	
+}
+
+.btn-next {
+	.btn(yellow);
+}
+
+.card-title {
+	.wish-title(2);	
+}
+
+.card {
+	position: relative;
+	.wish-card(535/2);
+	.with-belt(158);
+	margin: auto;
+	.toR(margin-top,80);
+	&:after {
+		transform: scale(1.3);
+	}
+	.card-content {
+		.toR(margin-bottom,500);
+	}
+
+	.congrats {
+		position: absolute;
+		.toR(top,22);
+		left: 0;
+		right: 0;
+		margin: auto;
+		.toR(width,252/2);
+		.toR(height,31/2);
+		.bg("@{base-url}/base/img/text-4.png",contain);
+
+	}
+}
+
+
+.wish-share {
+	transition: opacity 1s;
+	opacity: 0;
+	z-index: -3;
+	position: fixed;
+	.pos(0,0,0,0);
+	background: rgba(0,0,0,0.5);
+	.share-content {
+		position: absolute;
+		.pos(0,0,0,0);
+		padding: 31px 27px 0 0; 
+		background: url("@{base-url}/base/img/share.png") no-repeat center unit(64/16,rem) border-box,
+					url("@{base-url}/base/img/arrow.png") no-repeat right top content-box;	
+		background-size: unit(481/2/16,rem) ,unit(28/2/16,rem);
+	}
+}
+
+.open-share {
+	.wish-share {
+		opacity: 1;
+		z-index: 1;
+	}
+	.content-wrap {
+		filter: blur(5px);
+		-webkit-filter: blur(10px);
+		// transform: scale(0.9);
+	}
+}
+

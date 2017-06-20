@@ -1,0 +1,241 @@
+@import "@{static}/pagescript/forum/base/less/base";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/link";
+@import "@{static}/modules/base/less/profile";
+@import "@{static}/modules/ui/load/less/load";
+
+.container {
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    .placeholder {
+        display: block;
+        border: 0;
+        width: 100%;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 0;
+        li {
+            display: none;
+            position: relative;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;        
+            .counter {
+                padding: 10px 6px;
+                color: @bg-1;
+                font-size: 12px;
+                text-align: right;
+                text-shadow: 0 1px 1px @bg-3;
+            }
+            .banner-title {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 120px;
+                background: -webkit-linear-gradient(90deg, fade(@bg-3,60), fade(@bg-3,0));
+                background: -o-linear-gradient(90deg, fade(@bg-3,60), fade(@bg-3,0));
+                p {
+                    text-align: left;
+                    margin: 0;
+                    position: absolute;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 20px;
+                    color: @bg-1;
+                    font-size: 17px;
+                    font-weight: 700;
+                    text-shadow: 0 1px 1px @bg-3;
+                }
+        }
+        }
+    }
+}
+
+.requirement-list {
+    .requirement-item {
+        padding: 30px 15px;
+        border-bottom: 10px solid @bg-2;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: data-uri('../img/img_label_details.png') no-repeat center center;
+            background-size: 100% 100%;
+        }
+        p {
+            margin: 0;
+        }
+        .item-text {            
+            font-size: 13px;
+            color: @f2;
+            margin-top: 15px;
+            &:first-child {
+                margin: 0
+            }
+        }
+        .desc {
+            margin-top: 15px;
+            .font-main();
+            word-break: break-all;
+        }
+        .no-content:after {
+            content: "";
+            display: inline-block;
+            height: 1px;
+            width: 50px;
+            background-color: @div;
+            vertical-align: middle;
+        }
+    }
+}
+
+.tips {
+    padding: 25px 14px;
+    background-color: #FCF8F3;
+    p {
+        margin: 0;
+    }
+    .title {
+        font-size: 13px;
+        color: @f1;
+        margin-bottom: 15px;
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 9px;
+            height: 12px;
+            background: data-uri('../img/img_tips.png') no-repeat center center;
+            background-size: 100% 100%;
+            margin-right: 6px;
+            vertical-align: -1px;
+        }
+    }
+    .text {
+        font-size: 14px;
+        color: @f1;
+        margin-bottom: 15px;
+    }
+    .link {
+        color: @dc;
+        font-size: 13px;
+        font-weight: 400;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 10px;
+            background: data-uri('../img/img_arrow_rignt_grey.png') no-repeat center center;
+            background-size: 100% 100%;
+            margin-left: 5px;
+            vertical-align: -1px;            
+        }
+    }
+}
+
+.application-panel {
+    &.none {
+        padding: 0 0 100px;
+    }
+    padding: 39px 15px 100px;
+    hr {
+        width: 180px;
+        margin: 0 auto;
+        text-align: center;
+        &:after {
+            content: attr(data-application-num);
+            display: inline-block;
+            position: relative;
+            padding: 0 8px;
+            background-color: @bg-1;
+            top: -9px;
+            color: @f1;
+            font-size: 13px;
+        }
+    }
+    .application-list {
+        padding-top: 5px;
+        .item {
+            padding: 20px 0;
+            display: block;
+            border-bottom: 1px solid @div;
+            .profile.profile-h {
+                 padding-left: 38px;
+                .portrait {
+                    width: 30px;
+                    height: 30px
+                }
+                .name {
+                    display: block;
+                    max-width: none;
+                    color: @f1;
+                    font-size: 13px;
+                }
+                .title {
+                    color: @f2;
+                    font-size: 12px;
+                }
+            }
+            .com-desc {
+                margin: 20px 0;
+                overflow : hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                .font-main();
+            }
+            .assist {
+                margin: 0;
+                text-align: right;
+                color: @dc;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.set-fixed-footer(0,0,0);
+.fixed-footer {
+    background-color: fade(@bg-1, 85%);
+    box-sizing: border-box;
+    padding: 15px 15px 15px;
+    .btn {
+        &[disabled] {
+            background-color: @div;
+            color: @bg-1;
+            border-color: @div;
+        }
+        &#invite {
+            color: @bg-1;
+            border: @sc;
+            background-color: @sc;
+        }
+    } 
+    .link {
+        margin-top: 15px;
+        color: @f2;
+        font-size: 12px;
+        font-weight: 400;
+    }
+}

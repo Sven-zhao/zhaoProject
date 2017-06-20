@@ -1,0 +1,24 @@
+.golden-rect() {
+	position: relative;
+	border: 3px solid #ffb900;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.golden-rect-with-crown() {
+	@crown-height: 64px;
+	.golden-rect();
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 48px;
+		height: @crown-height;
+		background: url("@{staticurl}/pagescript/prize/base/img/icon-crown.png") no-repeat center center;
+		background-size: contain;
+		top: -42px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}

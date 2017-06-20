@@ -1,0 +1,37 @@
+/* wmp全站颜色配置 */
+/* user-selector */
+.hide {
+  display: none;
+}
+.user-selector {
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+.user-selector .title-bar {
+  height: 88px;
+}
+.user-selector .container {
+  padding-top: 88px;
+  padding-bottom: 0;
+}
+.user-selector .item {
+  position: relative;
+}
+.user-selector .item .add-btn {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  left: auto;
+  margin: auto 0;
+  width: 18px;
+  height: 18px;
+  background: no-repeat center center url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABIFJREFUWAnNWN+L1FUUv+c2O6O7mYU92OL6IBYkGL2tOxHWQ5ApgtSaogX5Lv1eFgQRIVrWfsn+AUEplqsIUfawQUU06z4EYVAQ5sMWWy9RJLs2s+M9fj73u/c719n56uzqDPOF4Z7vveecz2fuj3PP+YpZ4rP55PB93aLbrTVPwXS9GOk1Ynq9GzUzanQG8rRzZmJO5Yuf9o38sxQIaVZ54NTwLhE9aEQeh02uSbuqUf1OVcYm946ca8bmloS2fPrmY6J2VESKdKjGVADytRj9zKn92UllZvbv/zkrpmfNil6r+V4rbpMa2QnyTwIg7+1USypu6MLzx77ne9aTTWhw8K6BZze8CyIv0xhL8ZeqOarVuZNT+8f+y3IY9/efOHiP5Lr3iZjDWNq13o/q8cmzl1834+PXYt0gNyT06Iev3NvdXThtjGCfaFmdvjU77967+OI7s8FwKe0jH73R09NlXxMrh+CzAJ8Tc3Pl3T++9MG/9X4WESKZlSsLJczMw5wVp7pras/ohXrD5bz3fzK0xYqc42yp6i9Xr5aL9aRuJIRlKj634UvODJbnoqu67VP7R/+4GfjAx69uNPkCbLC59NrTP+w59tvN9PtPDK2zXXIepDZzpkpnLm+Ll8/Gxtwzngxnpgky3jbfNYh/tZG/vMju2F8jmX/QzesznH1iJZg1zZSQP01+A2vZL9MtZia4EGexJ5InlkNfo9aTwlbg/uShIXbQSwnxaLOTG/hO7ZkA0qglBrE4FrApe0JJ0JMip5GniQPteIhFTMY4ciCmJ+QjMF4YZ5Z7tJfzB4hFTNoGDpZ3E68DRmAGveU4vh0bYvroDw7kYldZtwMOc7wOmo3At0Og3tZjApscyMWqWERjTBnupnrldr0HbHLBHtI+AvOibBeBepwatvblfD5DQri1Y8UkAiPoRXEmHg+yWvNECPeUi6eGj4SxRq1aV66ono4jOrEtkgJyyYXkKqQQqRNcB4y+yTlMexcJgQwHIG+F/tZFSlGHQCEv5gC6HgzdxF59P7IUJHpcMmxyY6or7o59B922tDVsVZwu+RPMVq3uqT4A9Cspg0p5m/Keam7J/Kzgn30rznyT+mgghCWLhxJszBC45BApZ7B2DzHTg9KvQXHyhfcvQX47vGe1fs8sLBPJlPaOHMnSzer32FgfcsGSmWkqMu3MMmh1f4Q9bUX1KwL6HLjVyBn+AzYrFXvF2c+hV2VCzhw4w6Zl3R4T2OTAssn6ugmlCpYwz4S8ZcgZjn0RwMoEHMiFewiyjLFldcCEnHI7HmIRk1iBgyfEIg5JdwmnbS2rg3aQIYavRJKEvxQKSU+Igyzi2LJUYXVAuZUPMZKyqIZNvJQQK0rM0nFQKrBUYXXQDCEGuqAXy6GvUesrD2AQi5hxNZsSoqGvKFGacOlYqjRFqjI/jgh9iT9emo0IxH1RGYRKVicSzJrGovurswrFBaIdVUqnk9dJHxtSUhA653NMzApyx3ywquNlWKqwOkiKA+1j2hmyTtzQC5/05HdRN8F7cqmf9K4DYWRpS0tTxhoAAAAASUVORK5CYII=");
+  background-size: cover;
+}

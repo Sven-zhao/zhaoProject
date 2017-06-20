@@ -1,0 +1,52 @@
+@import "@{static}/modules/base/font/SongTi";
+@import "@{static}/modules/base/less/mixins";
+@import "@{static}/modules/ui/usertype/less/main";
+
+.person-card{
+    .display-flex();
+    .person-avatar{
+        background-size: cover;
+        background-color: #ccc;
+        width: .32rem;
+        height: .32rem;
+        border-radius: 50%;
+        margin-right: .1rem;
+    }
+    .person-info{
+        .flex(1);
+        .info-name{
+            font-size: .15rem;
+            .FF-SongTi;
+            font-weight: normal;
+            line-height: 1.2;
+            color: @black_87;
+            .display-flex();
+            .line-overflow-width(8em);
+            .info-identify{
+                .icon-identify-with-inline(@margin:.03rem);
+            }
+        }
+        .info-desc{
+            font-size: .12rem;
+            line-height: 1.2;
+            color: @black_54;
+            .line-overflow-width(14em);
+        }
+    }
+    .person-handler{
+        .display-flex();
+        margin-left: .16rem;
+    }
+    &.large{
+        .person-avatar{
+            width: .48rem;
+            height: .48rem;
+        }
+        .info-name{
+            font-size: .17rem;
+        }
+        .info-desc{
+            font-size: .13rem;
+        }
+    }
+}

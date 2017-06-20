@@ -1,0 +1,466 @@
+@import "@{static}/pagescript/opportunity/base/less/base";
+@import "@{static}/pagescript/opportunity/base/less/widget/icon";
+@import "@{static}/pagescript/opportunity/base/less/widget/dialog";
+@import "@{static}/modules/ui/loading/less/mod";
+@import "@{static}/pagescript/opportunity/base/less/widget/oppo-card";
+@import "@{static}/pagescript/opportunity/base/less/widget/user-card";
+
+@base-img-url: "@{staticurl}/pagescript/opportunity/base/img";
+
+html {
+	background: @whiteF2;
+}
+
+.dialog.manager {
+	.dialog-header {
+		background: #f0683e;
+	}
+}
+
+.confirm-modal-inner {
+	margin-top: 1.8rem !important;
+}
+
+.wrap {
+	display: none;
+	background: @whiteF2;
+	&.has-toolbar {
+		padding-bottom: .7rem;
+	}
+	&.show {
+		display: block;
+	}
+}
+
+.oppo {
+	background: #fff;
+	.content {
+		font-size: .16rem;
+		line-height: .26rem;
+		padding: .12rem 0 16px;
+		margin: 0 .16rem;
+		border-top: 1px solid @black_7;
+	}
+
+	.content pre {
+		font-size: .16rem;
+		line-height: .26rem;
+		overflow-wrap: break-word;
+		font-family: "PingFang";
+		text-align: justify;
+		word-break: break-all;
+		white-space: pre-wrap;
+		font-family: inherit;
+		font-weight: lighter;
+		margin: 0;
+	}
+
+}
+
+.creater-container,
+.server-container {
+	margin-top: .1rem;
+	padding: .1rem 16px 16px;
+	background: #fff;
+	.title {
+		font-size: .15rem;
+		color: @black_87;
+		margin-bottom: .1rem;
+		.FF-SongTi;
+	}
+}
+.creater,
+.server {
+	.user-card;
+	padding-right: 67px;
+	.follow-btn {
+		position: absolute;
+		box-sizing: border-box;
+		font-weight: 600;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto 0;
+		width: 62px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		color: @fawn;
+		text-align: center;
+		border: 1px solid;
+		border-radius: 2px;
+		&.followed {
+			background: @fawn;
+			color: #fff;
+		}
+	}
+	&:before {
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+.prompt-tip{
+	position: relative;
+	box-sizing: border-box;
+	min-height: 56px;
+	padding: 12px 16px 10px;
+	background: @beige;
+	.first-line{
+	  color: @black_54;
+		font-size: 15px;
+		height: 15px;
+	}
+	.second-line{
+		margin-top: 5px;
+		color: @black_30;
+		font-size: 12px;
+		height: 12px;
+	}
+	.middle-line {
+		.first-line();
+		position: absolute;
+		line-height: 15px;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+	}
+	.tip-btn {
+		position: absolute;
+		top: 0;
+		font-weight: 600;
+		bottom: 0;
+		margin: auto 0;
+		padding: 0 10px;
+		box-sizing: border-box;
+		min-width: 62px;
+		right: 16px;
+		height: 30px;
+		line-height: 31px;
+		font-size: 14px;
+		color: @fawn;
+		background: #fff;
+		border-radius: 3px;
+		text-align: center;
+		border: 1px solid @fawn;
+	}
+	.tip {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 16px;
+		margin: auto 0;
+		height: 14px;
+		font-size: 14px;
+		color: @black_30;
+	}
+	&.danger {
+		background: fadeOut(@tomato,20%);
+		.first-line {
+			color: #fff;
+		}
+		.second-line {
+			color: fadeOut(#fff,30%);
+		}
+		.middle-line {
+			color: #fff;
+		}
+		.tip-btn {
+			border: none;
+		}
+	}
+}
+
+.server {
+	.send-msg-btn,
+	.call-btn {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		right: 0;
+	}
+	.send-msg-btn {
+		height: .2rem;
+		right: .33rem;
+		line-height: .2rem;
+		padding: 0 .04rem;
+		border: 1px solid @warm-grey;
+		color: @warm-grey;
+		border-radius: .02rem;
+		font-size: .12rem;
+	}
+	.call-btn {
+			.icon("phone");
+			width: .22rem;
+	}
+}
+
+.toolbar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin-top: .1rem;
+	box-sizing: border-box;
+	height: .6rem;
+	padding: .1rem .16rem;
+	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.08);
+	background: #fff;
+}
+
+.expand-btn {
+	display: block;
+	padding: 16px 0 0;
+	text-align: center;
+	color: @fawn !important;
+	font-size: .15rem;
+}
+
+.col-btn {
+	.btn;
+}
+
+.spreading-effects {
+	position: relative;
+	display: block;
+	margin: .1rem 0;
+	height: .49rem;
+	line-height: .49rem;
+	color: @black_54 !important;
+	font-size: .13rem;
+	background: #fff;
+	text-align: right;
+	padding-right: .16rem;
+	.title {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: .16rem;
+		color: @black_87;
+		height: .16rem;
+		font-size: .16rem;
+	}
+	&::after {
+		content: "";
+		.icon("arrow-right-gray");
+	}
+}
+
+.pics {
+	margin-top: .12rem;
+	font-size: 0;
+	img {
+		display: block;
+		margin-bottom: .1rem;
+		width: 100%;
+		heigh: auto;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.header {
+	.oppo-card;
+	.oppo-info {
+			position: relative;
+			&.has-btn {
+					padding-right: .4rem;
+			}
+			.favo-btn {
+					position: absolute;
+					top: 4px;
+					right: 0;
+					width: .22rem;
+					min-height: .22rem;
+					font-size: .14rem;
+					text-align: center;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					padding-top: .25rem;
+					color: @fawn;
+					&::before {
+						content: "";
+						.icon("star-fawn");
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: .22rem !important;
+						min-height: .22rem !important;
+						background-size: contain;
+					}
+					&.light::before {
+						.icon("star-fawn-light");
+					}
+			}
+			.flag+.favo-btn {
+				padding-top: .47rem;
+				&::before {
+					top: .22rem;
+				}
+			}
+	}
+	padding-bottom: .13rem;
+	margin-bottom: 0;
+	.title {
+		font-size: .24rem !important;
+		line-height: .3rem;
+	}
+	.pic-num {
+		display: inline-block;
+		position: relative;
+		height: 17px;
+		margin-left: 6px;
+		line-height: 17px;
+		padding: 0 8px;
+		font-size: 12px;
+		vertical-align: middle;
+		color: @black_30;
+		.before-icon("album");
+		border-radius: 1px;
+		border: 1px solid @black_10;
+		&::before{
+			top: -1px;
+			position: relative;
+			margin-right: 4px;
+			height: 11px;
+			width: 14px;
+		}
+	}
+	.tags {
+		span {
+			font-size: .14rem;
+		}
+	}
+}
+
+
+
+.invitation {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	.mask {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0,.6);
+		z-index: 0;
+	}
+	.feq {
+		margin-top: .18rem;
+		text-align: center;
+		font-size: .15rem;
+		line-height: .17rem;
+		color: @black_87;
+		.num {
+			color: @fawn;
+			font-weight: 600;
+		}
+	}
+	.content {
+	  position: fixed;
+	  top: 1rem;
+	  left: .16rem;
+	  right: .16rem;
+	  z-index: 1;
+	  background: #fff;
+	  border-radius: .03rem;
+	  .title {
+	    font-size: .18rem;
+	    text-align: center;
+	    margin: .2rem 0;
+	  }
+		.btn-container {
+			padding: .18rem .51rem .18rem;
+		}
+	  textarea {
+			display: block;
+			box-sizing: border-box;
+			padding: .09rem .16rem;
+			resize: none;
+			border: none;
+			height: 1.6rem;
+			width: 90%;
+			margin: 0 auto;
+			border-radius: .03rem;
+			font-size: .16rem;
+			color: fadeOut(#000,13%);
+			background: @whiteF2;
+			&.short {
+				height: 1rem;
+			}
+			&::-webkit-input-placeholder {
+				color: fadeOut(#000,70%);
+			}
+	  }
+	}
+}
+
+.oppo-tags {
+	margin-top: 16px;
+	font-size: .13rem;
+	color: @black_87;
+	a {
+		display: inline-block;
+		padding: 0 .06rem;
+		color: @dirt;
+		background: @beige;
+		margin-right: 6px;
+		margin-bottom: 8px;
+	}
+}
+
+.same-creater-oppos {
+	.creater-container;
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 16px;
+	&>.title {
+		padding-left: 16px;
+		margin-bottom: 0;
+	}
+
+	.all-oppos-btn {
+		display: block;
+		padding-top: 16px;
+		border-top: 1px solid @black_7;
+		text-align: center;
+		color: @fawn;
+		font-size: .15rem;
+	}
+	ul {
+		margin-top: 18px;
+		padding-left: 16px;
+	}
+	li {
+		.oppo-card();
+		padding: 0 0 .12rem 0;
+		border-bottom: 1px solid @black_7;
+		&:last-child {
+			border-bottom: none;
+		}
+		.pic {
+			margin: 0 16px 0 20px;
+		}
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.oppo-info .title {
+			font-family: inherit !important;
+		}
+	}
+}

@@ -1,0 +1,117 @@
+@import "../../base/less/base";
+@import "@{static}/modules/ui/loading/less/mod.less";
+@import "@{static}/pagescript/event/base/less/usertype";
+
+body {
+}
+
+body>.content {
+	position: fixed;
+	height: 410px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+.participant {
+	text-align: center;
+	margin: 0 22px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid @div;
+	.avatar {
+		.usertype();
+		top: 0;
+		position: relative;
+		width: 73px;
+		height: 73px;
+		margin: 0 auto; 
+		border-radius: 50%;
+		background: no-repeat center center gray;
+		background-size: cover;
+	}
+	.name {
+		margin-top: 10px;
+		font-size: 15px;
+	}
+	.info {
+		margin-top: 6px;
+		color: @f3;
+		font-size: 13px;
+	}
+}
+
+.info-col {
+	position: relative;
+	margin: 15px 22px;
+	padding-left: 5em;
+	&:last-child {
+		margin-bottom: 50px;
+	}
+	.label,
+	.field{
+		font-size: 14px;
+	}
+	.label {
+		position: absolute;
+		left: 0;
+		width: 4em;
+		color: @f2;
+	}
+}
+
+.checkin-btn {
+	display: block;
+	margin-top: 50px;
+	color: @bg-1;
+	text-align: center;
+	font-size: 17px;
+	height: 46px;
+	line-height: 46px;
+	border-radius: 5px;
+	background-color: fade(@bg-1,40%);
+}
+
+.wait-sign {
+	display: none;
+	position: relative;
+	height: 46px;
+	margin-top: 50px;
+}
+
+.success {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 56px;
+	color: @bg-1;
+	font-size: 21px;
+	text-align: center;
+
+	transition: opacity 1s,transform 1s;
+	transform: translateY(100px);
+	opacity: 0;
+
+	.icon-success {
+		&:before {
+			margin-right: 6px;
+			font-size: 15px;
+			content: "\e900";
+			color: #70ffd3;
+		}
+	}
+
+	&.up {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+
+	&.display {
+		display: block;
+		transition: none;
+		transform: translateY(0px);
+		opacity: 1;
+	}
+
+}

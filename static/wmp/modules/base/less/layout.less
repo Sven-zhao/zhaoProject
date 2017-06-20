@@ -1,0 +1,25 @@
+@import "./variables";
+
+.container {
+	position: relative;
+	padding: 15px 15px 0 15px;
+	z-index: 1;
+}
+
+h1 {
+	color: @f1;
+	font-size: 15px;
+	font-weight: bold;
+	height: 15px;
+	line-height: 15px;
+	margin: 0;
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 3px;
+		height: 14px;
+		vertical-align: -1px;
+		background-color: @dc;
+		margin-right: 8px;
+	}
+}

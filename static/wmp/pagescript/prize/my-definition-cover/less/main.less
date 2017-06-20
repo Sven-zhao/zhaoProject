@@ -1,0 +1,148 @@
+@import "@{static}/pagescript/prize/base/less/base";
+@import "@{static}/modules/base/less/my-normalize";
+@import "@{static}/modules/ui/usertype/less/main";
+
+html {
+	.backgroundImage(4);
+	font-size: 16px;
+}
+
+.content-wrap {
+	display: none;
+}
+
+.cover-user-name {
+	display: inline-block;
+	max-width: 5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	.slogan & {
+		vertical-align: unit(0.5/16,rem);
+	}
+
+	.btn-to-rank & {
+		vertical-align: unit(1/16,rem);
+	}
+}
+
+.banner {
+	position: relative;
+	width: unit(294/16,rem);
+	height: unit(80/16,rem);
+	margin: unit(70/16,rem) auto 0;
+	background:url("@{staticurl}/pagescript/prize/base/img/bg-title.png") no-repeat right bottom;
+	background-size: unit(209/16,rem) unit(79/16,rem);
+	
+	.avatar {
+		.avatar();
+		position: absolute;
+		width: unit(72/16,rem);
+		height: unit(72/16,rem);
+		border: 2px solid #ffc026;
+		left: 0;
+		top: 0;
+		.icon-identify {
+			left: 72%;
+			top: 72%;
+			width: unit(20/16,rem);
+			height: unit(20/16,rem);
+		}
+	}
+
+	.name {
+		position: absolute;
+		height: unit(28/16,rem);
+		left: unit(79/16,rem);
+		width: unit(118/16,rem);
+		font-size: unit(28/16,rem);
+		line-height: unit(28/16,rem);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: #fff; 
+		font-weight: 500;
+		text-align: center;
+	}
+}
+
+.friend-prize {
+	position: absolute;
+	bottom: unit(190/16,rem);
+	left: 0;
+	right: 0;
+	height: unit(14/16,rem);
+	font-size: unit(16/16,rem);
+	line-height: 0.88;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.rows {
+	margin: unit(60/16,rem) 0 unit(40/16,rem);
+}
+.row {
+	position: relative;
+	padding-left: 50%;
+	.ellipsis() {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.left {
+		position: absolute;
+		width: 50%;
+		left: 0;
+		text-align: right;
+		opacity: 0.6;
+		font-size: unit(18/16,rem);
+		line-height: 1.83;
+		color: #fff;
+		.ellipsis;
+	}
+	.right {
+		text-align: left;
+		font-size: unit(22/16,rem);
+		padding-left: unit(12/16,rem);
+		line-height: 1.5;
+		color: #ffffff;
+		.ellipsis;
+	}
+	&.last{
+		.left,
+		.right {
+			font-size: unit(18/16,rem) !important;
+			opacity: 1 !important;
+			line-height: 1;
+		}
+	}
+}
+
+.btn-to-rank {
+	.btn();
+	margin: unit(55/16,rem) unit(44/16,rem) 0;
+	height: unit(44/16,rem);
+	line-height: unit(44/16,rem);
+	font-size: unit(17/16,rem);
+	border-radius: unit(5/16,rem);
+}
+
+.foot-tip {
+	margin-top: unit(21/16,rem);
+	height: unit(17/16,rem);
+	font-size: unit(16/16,rem);
+	line-height: 1.06;
+	text-align: center;
+	color: #ffc026;
+}
+
+.slogan {
+	margin-top: unit(20/16,rem);
+	font-size: unit(18/16,rem);
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+	background: url("@{staticurl}/pagescript/prize/base/img/fade-text-bg.png") no-repeat center top;
+	background-size: unit(388/16,rem) unit(152/16,rem);
+}

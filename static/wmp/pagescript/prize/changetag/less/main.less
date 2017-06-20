@@ -1,0 +1,75 @@
+@import '@{static}/modules/base/less/my-normalize';
+@import "../../base/less/base";
+
+
+.changetag{
+    .backgroundImage(3);
+    padding: 0.1px;
+}
+
+.tag-box{
+    margin-top: 70px;
+    .tag-title{
+        color:#ffc026;
+        font-size: .2rem;
+        text-align: center;
+        line-height: 1.7;
+        font-weight: 600;
+        margin-bottom: 44px;
+    }
+    .tag-tips{
+        .ribbon_purple();
+        margin-bottom: 20px;
+    }
+    .tag-checkbox{
+        margin: 0 24px;
+    }
+    .tag-item{
+        .tag-content{
+            height: 52px;
+            background-color: rgba(255, 255, 255, 5%);
+            border: solid 1px #6453FF;
+            .display-flex();
+            font-size: .14rem;
+            font-weight: 500;
+            line-height: 1.3;
+            color: #fff;
+            text-align: center;
+            & > span{
+                width: 100%;
+            }
+            -webkit-transition: all .08s linear;
+            transition: all .08s linear;
+        }
+        width: 24.7%;
+        float: left;
+        margin: 1px .2% 0;
+        &:nth-child(4n+1){
+            margin-left: 0;
+        }
+        &:nth-child(4n+4){
+            margin-right: 0;
+        }
+
+        & > .tag-input{
+            display: none;
+        }
+        & > .tag-input:checked ~ .tag-content,
+        & > .tag-input:target ~ .tag-content {
+            color: #FFC026;
+            border:3px solid #FFC026;
+            // box-shadow: rgba(0, 0, 0, .43) 0 2px 0 0;
+            // -webkit-transform: translateY(-1px);
+            // transform: translateY(-1px);
+        }
+    }
+    .tag-confirm{
+        .btn();
+        margin-top: 40px;
+        margin-bottom: 40px;
+        &.tag-confirm_disabled{
+        	background-color: rgba(254, 254, 254, 0.3);
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@image-url: "@{static}/modules/base/img";
+
+.prompt-pic {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	.prompt {
+		text-align: center;
+		font-size: 15px;
+		color: @f3;
+	}
+
+	.pic {
+		width: 150px;
+		height: 150px;
+		margin: 90px auto 20px auto;
+		background: no-repeat center center;
+		background-size: contain;
+	}
+
+	&.org-manage {
+		.pic {
+			background-image: data-uri("@{image-url}/gear-spanner.png");
+		}
+	}
+
+	&.entrepreneur {
+		.pic {
+			background-image: data-uri("@{image-url}/hand-shake-card.png");
+		}
+	}
+
+	&.member-list-empty {
+		.pic {
+			background-image: data-uri("@{image-url}/name-card.png");
+		}
+	}
+
+	&.search-result-empty {
+		.pic {
+			background-image: data-uri("@{image-url}/name-card-search.png");
+		}
+	}
+}

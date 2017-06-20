@@ -1,0 +1,86 @@
+
+.comment-list {
+    background: @bg-2;
+    padding: 10px 0 1px;
+    .comment-list-detail {
+        margin-bottom: 10px;
+        background: @bg-1;
+        padding: 20px 15px 0;
+        .comment-content {
+            padding: 20px 0;
+            border-bottom: 1px solid fade(@div,50);
+            .font-main();
+            line-height: 1.2;
+            word-break: break-all;
+        }
+        .tool-bar {
+            position: relative;
+            height: 40px;
+            font-size: 12px;
+            &>div {   
+                position: absolute;             
+                top: 0;
+                bottom: 0;
+                line-height: 40px;
+            }
+            .left {
+                left: -5px;
+                color: @f2;
+            }
+            .right {
+                right: -5px;
+                color: @f1;
+            }
+            span:not(.seperator) {
+                padding: 5px;
+            }
+            .set-top {
+                &:before {
+                    content: "置顶";
+                    display: inline-block;
+                }
+                &.true {
+                    &:before {
+                        content: "取消置顶";
+                        display: inline-block;
+                    }
+                }
+            }
+            .exhibit {
+                color: @f1;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 11px;
+                    height: 14px;
+                    background: data-uri('@{static}/pagescript/comment/base/img/btn_share.png') no-repeat;
+                    background-size: 100%;
+                    margin-right: 6px;
+                }
+            }
+            .celebrate {
+                &:after {
+                    content: attr(bingo);
+                    display: inline-block;
+                }
+                &[bingo="0"]:after {
+                    content: '给个赞';
+                }
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 15px;
+                    height: 14px;
+                    background: data-uri('@{static}/pagescript/comment/base/img/btn_like.png') no-repeat;
+                    background-size: 100%;
+                    margin-right: 6px;
+                }
+                &.true {
+                    &:before {
+                        background-image: data-uri('@{static}/pagescript/comment/base/img/btn_like_ed.png');
+                    }
+                }                
+            }
+        }
+    }
+}

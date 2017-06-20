@@ -1,0 +1,88 @@
+@import "@{static}/modules/base/less/page";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/qr";
+@import "@{static}/pagescript/base/less/base";
+@import "@{static}/pagescript/center/base/less/base";
+
+.container {
+	padding: 40px 15px 15px;
+}
+p{
+	margin:0px;
+	padding:0px;
+}
+
+.icon {
+	width: 55px;
+	height: 55px;
+	display: block;
+	margin: 0 auto;
+	background: data-uri('../img/img_verification_pass.png') no-repeat;
+	background-size: 100% 100%;
+}
+
+.main {
+	color: @f1;
+	p {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.result {		
+		margin-top: 21px;
+		font-size: 16px;
+		color:@f1;
+	}
+	.desc {
+		font-size: 13px;
+	}
+	.result + .desc {
+		margin-top: 30px;
+	}
+}
+.desc{
+	font-size: 13px;
+	color: @f1;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.qr {
+	margin-top: 82px;
+	text-align: center;
+	.text-a {
+		span{
+			font-size: 15px;
+			color:@f1;
+			padding:0 15px;
+			background:#fff;
+			position:relative;
+			z-index:2;
+
+		}
+		&:after{
+			content:'';
+			display:block;
+			width:300px;
+			height:1px;
+			background:#dbb786;
+			transform:scale(1,0.5);
+			-webkit-transform:scale(1,0.5);
+			margin:0 auto;
+			position:relative;
+			top:-10px;
+			z-index:1;
+		}
+	}
+	.text-b {
+		font-size: 12px;
+		color: @f2;
+		
+	}
+	img {
+		width: 150px;
+		height: 150px;
+		display: block;
+		margin: 19px auto 15px;
+	}
+}

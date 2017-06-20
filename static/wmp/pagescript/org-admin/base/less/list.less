@@ -1,0 +1,68 @@
+.item-list {
+	.item {
+		display: block;
+		position: relative;
+		padding: 15px 45px 15px 63px;
+		border-bottom: 1px solid @div;
+		text-decoration: none;
+		min-height: 45px;
+		&:last-child {
+			border: none;
+		}
+		&:active {
+			background-color: @bg-2;
+		}
+		.avatar {
+			position: absolute;
+			top: 15px;
+			left: 0;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: no-repeat center center;
+			background-size: cover;
+		}
+		.title {
+			margin-bottom: 6px;
+			font-size: 15px;
+			font-weight: bold;
+			color: @f1;
+		}
+		.label {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			height: 20px;
+			padding: 0 5px;
+			line-height: 20px;
+			font-size: 12px;
+			background-color: #cecece;
+			border-radius: 3px;
+			color: #fff; 
+			&.gold {
+				background-color: @sc;
+			}
+		}
+		.desc {
+			font-size: 13px;
+			color: @f2;
+		}
+		.more-info {
+			.desc();
+			margin-top: 10px;
+		}
+		.status {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			bottom: 0;
+			margin: auto 0;	
+			height: 12px;
+			font-size: 11px;
+			color: @f3;
+		}
+
+	}
+}
+
+

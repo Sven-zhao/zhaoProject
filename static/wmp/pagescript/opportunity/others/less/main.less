@@ -1,0 +1,59 @@
+@import "@{static}/pagescript/opportunity/base/less/base";
+@import "@{static}/modules/ui/loading/less/mod";
+@import "@{static}/pagescript/opportunity/base/less/widget/oppo-card";
+@import "@{static}/pagescript/opportunity/base/less/widget/user-card";
+@base-img-url: "@{staticurl}/pagescript/opportunity/base/img";
+
+html {
+	background-color: @whiteF2;
+	min-height: 100%;
+}
+
+#app {
+	display: none;
+	&.show {
+		display: block;
+	}
+}
+
+.rec-list {
+
+	&>.title {
+		font-size: 0.15rem;
+		color: @black_87;
+		padding: .16rem;
+		padding-bottom: 0;
+	}
+	margin-top: .1rem;
+	background-color: #fff;
+
+	.oppo-item {
+		margin: 0 0 0 .16rem;
+		padding-left: 0;
+		border-bottom: 1px solid @black_7;
+	}
+}
+
+
+
+.user-container {
+	padding: .08rem;
+	background-color: #fff;
+}
+
+.creater {
+	.user-card();
+}
+
+.oppo-item {
+	.oppo-card();
+	margin: .1rem 0;
+}
+
+.empty {
+	height: 3rem;
+	background: url("@{base-img-url}/empty.png") no-repeat center center;
+	background-color: #fff;
+	margin: .1rem 0;
+	background-size: 40%;
+}

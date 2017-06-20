@@ -1,0 +1,130 @@
+@import "@{static}/pagescript/trust/base/less/base.less";
+@import "@{static}/modules/ui/usertype/less/mod";
+
+html {
+	background-color: @bg-color;
+}
+
+.bubble {
+	.msg-bubble();
+	.avatar {
+		overflow: visible;
+		.avatar-with-type-icon(16px);
+		&:after {
+			z-index: 0;
+		}
+		[class^="icon"] {
+			z-index: 1;
+		}
+	}
+}
+
+.btn-red {
+	display: none;
+	&.show {
+		display: block;
+	}
+}
+
+.question {
+	display: none;
+	&.active {
+		display: block;
+	}
+
+	.bubble-header,
+	.header {
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: -88px;
+			left: 0;
+			background:  no-repeat left top url("@{staticurl}/pagescript/trust/base/img/letter-bg.png");
+		}
+	}
+
+	.bubble-header {
+		position: relative;
+		padding: 30px 25px 40px;
+		background-color: @main-color;
+
+	}
+	.header {
+		position: relative;
+		padding: 66px 33px 29px;
+		background-color: @main-color;
+		.mark {
+			@mark-radius: 70px;
+			position: absolute;
+			background-color: @red-color;
+			color: #fff;
+			width: @mark-radius;
+			height: @mark-radius;
+			line-height: 98px;
+			font-size: 18px;
+			border-radius: 50%;
+			text-align: center;
+			top: -@mark-radius/2;
+		}
+		.title {
+			text-align: left;
+			font-size: 20px;
+			color: #fff;
+		}
+	}
+
+	.options-container {
+		padding: 30px 27px;
+		opacity: 0;
+	}
+
+	.options {
+		@edge-length: 104px;
+		font-size: 0;
+		&.active {
+			display: block;
+		}
+		.option {
+			display: inline-block;
+			position: relative;
+			font-size: 16px; 
+			margin: 0 4px 4px 0;
+			width: @edge-length; 
+			height: @edge-length;
+			border-radius: 8px;
+			background-color: #fff;
+			color: #1e1e1e;
+			text-align: center;
+			box-sizing: border-box;
+			.text {
+				display: block;
+				position: absolute;
+				top: 50%;
+				width: 80%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				.translate(0,-50%);	
+			}
+
+			&.checked {
+				background-color: @main-color;
+				color: #fff;
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					right: 3px;
+					top: 3px;
+					width: 16px;
+					height: 16px;
+					background: no-repeat center center url(../../base/img/check.png);
+					background-size: contain;
+				}
+			}
+		}
+	}
+}

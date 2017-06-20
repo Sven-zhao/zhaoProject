@@ -1,0 +1,50 @@
+@import "variables"; 
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  line-height: 26px;
+  height: 38px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.btn-default {
+	  color: @btn-default-color;
+	  background-color: @btn-default-bg;
+	  border-color: @btn-default-border;
+  }
+
+  &.btn-primary {
+	  color: @btn-primary-color;
+	  background-color: @btn-primary-bg;
+	  border-color: @btn-primary-border;
+  }
+
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-block+.btn-block {
+    margin-top: 5px;
+}

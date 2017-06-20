@@ -1,0 +1,51 @@
+@import "./variables";
+
+//legacy one
+.qrCode {
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 140px;
+		height: 140px;
+	}
+	p {
+		margin: 20px 0 0 0;
+		text-align: center;
+		color: @f1;
+		font-size: 13px;
+	}
+}
+
+//new one
+.qr {
+	&.qr-default {
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 140px;
+			height: 140px;
+		}
+		p {
+			margin: 20px 0 0 0;
+			text-align: center;
+			color: @f1;
+			font-size: 13px;
+		}
+	}
+	&.qr-text-up {
+		margin-top: 15px;
+		.qr-text {
+			margin: 0px;
+			font-size: 12px;
+			color: @bg-1;
+			text-align: center;
+		}
+		img {
+			width: 80px;
+			height: 80px;
+			display: block;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+	}
+}

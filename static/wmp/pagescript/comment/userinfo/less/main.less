@@ -1,0 +1,36 @@
+@import "@{static}/pagescript/comment/base/less/base";
+@import "@{static}/pagescript/comment/base/less/login-header";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/form";
+
+.bg-img {
+    background-image: data-uri('@{static}/pagescript/comment/base/img/img_login_profile_b.png');
+}
+
+.help {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+.form {
+    padding: 28px 11px 25px;
+    .name {
+        padding-right: 75px;
+        .select-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 34px;
+            margin: auto 0;
+            select {
+                padding-right: 20px;
+            }
+        }
+    }
+    .location {
+        .select-container {
+            width: 50%;
+            float: left;
+        }
+    }
+}

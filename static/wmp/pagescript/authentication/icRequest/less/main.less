@@ -1,0 +1,125 @@
+@import "@{static}/modules/base/less/wx-normalize";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/link";
+@import "@{static}/modules/base/less/mask";
+
+.container-block {
+	position: relative;
+	z-index: 0;
+}
+
+.bg {
+	width: 100%;
+}
+.content {
+	position: absolute;
+	z-index: 1;
+	top: 50px;
+	left: 15px;
+	right: 15px;
+	.profile {
+		position: relative;
+		left: 5px;
+		width: 250px;
+		margin: 0 auto;
+		padding-top: 10px;
+		background-image: data-uri('../img/img_bg_invitation_number.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		.portrait {
+			display: block;
+			width: 60px;
+			height: 60px;    
+			margin: 0 auto;
+			border-radius: 50%;
+		}
+		.text {		
+			position: relative;
+			margin-top: 41px;
+		    padding: 0 20px;
+		    box-sizing: border-box;
+			width: 240px;
+			font-size: 16px;
+			font-weight: 700;
+			color: @f1;	
+			background-image: data-uri('../img/img_chat_bg_invitation.png');
+			background-size: 100% 100%;
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				height: 25px;
+				background-size: 100% 100%;				
+			}
+			&:before {
+    			top: -25px;
+				background-image: data-uri('../img/img_chat_bg_invitation_top.png');
+			}		
+			&:after {
+    			bottom: -25px;
+				background-image: data-uri('../img/img_chat_bg_invitation_bottom.png');
+			}	
+		}
+	}
+	#ic-send {
+		margin-top: 55px; 
+		font-weight: 700;
+	}
+	#register {
+		margin-top: 20px; 
+		font-weight: 700;	
+		color: @sc;	
+		background-color: transparent;
+	}
+}
+
+.fixed-footer {
+	position: fixed;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background-image: data-uri('../img/img_invitation_footer_bg.png');
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+	padding: 20px 70px 0 65px;
+		.logo {
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			width: 40px;
+			height: 40px;
+			background-image: data-uri('../img/img_app_icon.png');
+			background-size: 100%;
+		}
+		.name {
+			font-size: 15px;
+			font-weight: 700;
+			color: @f1;				
+		}
+		.desc {
+			font-size: 12px;
+			color: @f2;		
+			text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow-x: hidden;			
+		}
+		.more {
+			position: absolute;
+			box-sizing: border-box;
+			top: 20px;
+			right: 0;
+			width: 70px;
+			height: 36px;
+			background-image: data-uri('../img/img_div.png');
+			background-repeat: no-repeat;
+			padding: 12px 0 0 8px;
+			font-size: 12px;
+			font-weight: 700;
+			color: @dc;
+		}
+}
+
+.set-mask(10);

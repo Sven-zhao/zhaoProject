@@ -1,0 +1,46 @@
+@import "@{static}/modules/base/less/wx-normalize";
+@import "../../base/less/base";
+@import "@{static}/pagescript/userinfos/basicinfos/less/main";
+html {
+	.backgroundImage(3);
+	.container {
+		.form {
+			label {
+				color: #ffc026;
+				&.gender {
+					color: #fff;
+				}
+			}
+			.form-control {
+				background-color: transparent;
+			}
+			input {
+				color: #fff;
+			}
+			input[type="radio"] {
+				border-radius: 50%;
+			}
+			select {
+				color: #fff;
+				z-index: 3 !important;
+			}
+		}
+		padding-top: 59px; 
+		h1 {
+			color: #fff;
+			&:before {
+				background-color: #ffc026;
+			}
+		}
+		background-color: transparent;
+	}
+	#submit-btn {
+		border: none;
+		background-color: #ffc026;
+		color: #000;
+		&[disabled] {
+			background-color: rgba(255,255,255,0.3);
+			color: #000;
+		}
+	}
+}

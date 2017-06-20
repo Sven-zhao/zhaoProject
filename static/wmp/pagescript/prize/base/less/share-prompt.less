@@ -1,0 +1,80 @@
+#prize-share-tip {
+	display: none;
+	position: fixed;	
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+#prize-share-tip.show {
+	display: block !important;
+}
+
+#prize-share-tip .content {
+	position: relative;
+	width: unit(320/16,rem);
+	height: unit(340/16,rem);
+	margin: unit(50/16,rem) auto;
+	border-radius: unit(8/16,rem);
+	background: url(../img/cup-and-title.jpg) no-repeat center center #fff;
+	background-size: unit(248/16,rem) unit(93/16,rem); 
+}
+
+#prize-share-tip .content:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: unit(-8/16,rem);
+	right: unit(26/16,rem);
+	width: unit(26/16,rem);
+	height: unit(20/16,rem);
+	background: #fff;
+	transform: rotate(45deg);
+}
+
+#prize-share-tip .sys-btn {
+	display: inline-block;
+	width: 22px;
+	height: 10px;
+	background: url("../img/sys-btn.png") no-repeat center center;  
+	background-size: contain;
+	transform: rotate(90deg);
+}
+
+#prize-share-tip .rank-link {
+	position: absolute;
+	height: unit(17/16,rem);
+	font-size: unit(16/16,rem);
+	line-height: 1.06;
+	text-align: center;
+	color: #ffc026;
+	bottom: unit(32/16,rem);
+	left: 0;
+	right: 0;
+}
+
+#prize-share-tip .sys-btn.ios {
+	transform: rotate(0deg);
+}
+
+#prize-share-tip .tip {
+	position: absolute;
+	font-size: unit(14/16,rem);
+	line-height: 1.0;
+	text-align: center;
+	color: #6b6b6b;
+	bottom: unit(44/16,rem);
+	left: 0;
+	right: 0;
+}
+
+#prize-share-tip .slogan {
+	padding: unit(52/16,rem) unit(35/16,rem);
+	font-size: unit(17/16,rem);
+	line-height: 1.29;
+	text-align: center;
+	color: #1e1e1e;
+	background: none;
+}

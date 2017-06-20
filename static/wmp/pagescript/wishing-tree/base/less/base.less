@@ -1,0 +1,282 @@
+@import "@{static}/modules/base/less/wx-normalize";
+@wishing-tree: "@{static}/pagescript/wishing-tree";
+@base-url: "@{staticurl}/pagescript/wishing-tree";
+@bg-color: #181331;
+@icon-img-path: "@{staticurl}/modules/ui/usertype/img";
+
+.avatar-with-type-icon(@icon-width:22px) {
+	.icon-identify{
+		width:@icon-width;
+		height:@icon-width;
+		position:absolute;
+		bottom: -7%;
+		right: -10%;
+	}
+	.icon-5{
+		background: data-uri('@{icon-img-path}/img_dolphin.png') left center no-repeat;
+		background-size:100% auto;
+	}
+	.icon-2{
+		background: data-uri('@{icon-img-path}/img_eagle.png') left center no-repeat;
+		background-size:100% auto;
+	}
+	.icon-3{
+		background: data-uri('@{icon-img-path}/img_lion_gold.png') left center no-repeat;
+		background-size:100% auto;
+	}
+	.icon-1{
+		background: data-uri('@{icon-img-path}/img_lion_green.png') left center no-repeat;
+		background-size:100% auto;
+	}
+	.icon-4{
+		background: data-uri('@{icon-img-path}/img_bee.png') left center no-repeat;
+		background-size:100% auto;
+	}
+}
+
+.toR(@prop,@rest...) {
+	@counter: length(@rest);
+	.one(@counter) when (@counter = 1 ) {
+		@{prop}: unit(extract(@rest,1)/16,rem);
+	}
+
+	.two(@counter) when (@counter = 2 ) {
+		@{prop}: unit(extract(@rest,1)/16,rem) unit(extract(@rest,2)/16,rem);
+	}
+	
+	.tree(@counter) when (@counter = 3 ) {
+		@{prop}: unit(extract(@rest,1)/16,rem) unit(extract(@rest,2)/16,rem) unit(extract(@rest,3)/16,rem);
+	}
+
+	.four(@counter) when (@counter = 4 ) {
+		@{prop}: unit(extract(@rest,1)/16,rem) unit(extract(@rest,2)/16,rem) unit(extract(@rest,3)/16,rem) unit(extract(@rest,4)/16,rem);
+	}
+
+	.one(@counter);
+	.two(@counter);
+	.tree(@counter);
+	.four(@counter);
+}
+
+.size(@width:auto,@height:auto) {
+	width: @width;
+	height: @height;
+}
+
+.pos(@top:auto,@right:auto,@bottom:auto,@left:auto) {
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
+}
+
+.bg(@img-url,@type:cover) {
+	background: url(@img-url) no-repeat center center;
+	background-size: @type;
+}
+
+.bg-tree-sky() {
+	background: url(../../base/img/bg-tree-sky.jpg) no-repeat center bottom;
+	background-color: @bg-color;
+	background-size: cover;
+}
+
+.bg-sky() {
+	background: url(../../base/img/bg-sky.jpg) no-repeat center bottom;
+	background-color: @bg-color;
+	background-size: cover;
+}
+
+.logo {
+	position: absolute;
+	.toR(width,49);
+	.toR(height,18);
+	.toR(top,4);
+	.toR(right,14);
+	.bg("@{base-url}/base/img/icon-log.png",cover);
+}
+
+.content-wrap {
+	display: none;
+}
+
+.with-belt(@width: 255/2) {
+	@w: 255/2;
+	@h: 340/2;
+	&:after{
+		content: "";
+		display: block;
+		position: absolute;
+		.toR(width,@width);
+		.toR(height,@width * @h / @w);
+		.toR(top,-48%);
+		.toR(left,-32%);
+		.bg("@{base-url}/base/img/belt.png",contain);
+		z-index: 0;
+	}
+}
+
+.btn(@color) {
+	display: block;
+	.toR(line-height,84/2);
+	margin: 0 auto;
+	text-decoration: none;	
+	.toR(font-size,15);
+	text-align: center;
+	.yellow() when (@color = yellow) {
+		.toR(width,230);
+		.toR(height,44);
+		color: #694305;
+		&.disabled {
+			color: #f6c968;
+		}
+	}
+	.red() when (@color = red) {
+		.toR(width,390/2);
+		.toR(height,84/2);
+		color: #fff;
+	}
+	.bg("@{staticurl}/pagescript/wishing-tree/base/img/btn-@{color}.png",contain);
+	.red;
+	.yellow;
+}
+
+.wish-card(@width,@height:auto) {
+	.set-height(@h) when (isnumber(@h)){
+		.toR(height,@h);
+	}
+	box-sizing: border-box;
+	@img-prefix: "@{base-url}/base/img/bg-card-";
+	.toR(width,@width);
+	.set-height(@height);
+	.toR(padding,80/2,0,60/2);
+	@w: unit(@width/16,rem);
+	background: url("@{img-prefix}top.png") no-repeat center top border-box,
+				url("@{img-prefix}bot.png") no-repeat center bottom border-box,
+				url("@{img-prefix}mid.png") repeat-y center content-box;
+	background-size: @w ,@w ,@w ;
+	.card-content {
+		.toR(width,@width - (50 * 2));
+		margin: auto;
+		.toR(margin-top,25);
+		.toR(margin-bottom,25);
+	}
+}
+
+.wish-text(@width,@height) {
+	.toR(width,@width);
+	.toR(height,@height);
+	margin: auto;
+	background: url("@{base-url}/base/img/text-0.png") no-repeat center center/contain;
+}
+
+.wish-title(@type) {
+	.toR(width,87);
+	.toR(height,28);
+	margin: auto;
+	.bg("@{base-url}/base/img/text-wish-@{type}.png",contain);	
+}
+
+.wish-owner {
+	.toR(font-size,12);
+	.toR(margin-top,15);
+	text-align: right;
+	color: #292929;
+}
+
+.card-text {
+	.toR(font-size,15);
+	.toR(margin-top,10);
+	line-height: 1.4;
+	text-align: justify;
+	color: #292929;
+}
+
+.wish-tip(@width,@height,@text-num) {
+	position: absolute;
+	.toR(top,29);
+	.toR(right,13);
+	.toR(width,@width);
+	.toR(height,@height);
+	.bg("@{base-url}/base/img/text-@{text-num}.png",contain);
+	z-index: 2;
+}
+
+.avatar {
+	background-size: cover;
+}
+
+.user-info {
+	position: absolute;
+	transition: 0.5;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	text-align: center;
+	.toR(top, -100);
+	.toR(height,44);
+	.avatar {
+		display: inline-block;
+		position: relative;
+		.toR(width,44);
+		.toR(height,44);
+		border-radius: 50%;
+		border: solid fadeOut(#fff,40%);
+		.toR(border-width,3);
+		.avatar-with-type-icon(unit(16/16,rem));
+	}
+	.info {
+		display: inline-block;
+		.toR(vertical-align,7);
+		.toR(max-width,170);
+		.uname {
+			color: #fff;
+			.toR(font-size,16);
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.detail {
+			color: fade(#fff,80%);
+			.toR(font-size,12);
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+}
+
+
+.app-download-footer {
+	position: fixed;
+	.toR(height,40);
+	.toR(line-height,40);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: fade(#fff,80%);
+	.toR(font-size,13);
+	.toR(padding,0,10,0,10);
+	background-color: fadeOut(#000,20%);	
+	.btn-download {
+		position: absolute;
+		.toR(height,17);
+		.toR(line-height,17);
+		.toR(padding,4,6,4,6);
+		background-color: fadeOut(#fff,70%);
+		color: fade(#fff,80%);
+		border-radius: 10px;
+		.toR(right,10);
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

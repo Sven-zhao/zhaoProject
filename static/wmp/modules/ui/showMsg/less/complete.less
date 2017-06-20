@@ -1,0 +1,38 @@
+/* start msg-box */
+.complete-msg-box {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(128, 128, 128, 0.25);
+	z-index: 1000;
+	.msg-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: @dc;
+		text-align:center;
+		z-index: 1001;
+		.msg {
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+			font-size: 14px;
+			color: @bg-1;
+			&:before {
+				content: "";
+				display: inline-block;
+				background: data-uri("@{static}/modules/ui/showMsg/img/icon-complete.png");
+				background-size: 100% 100%;
+				width: 15px;
+				height: 15px;
+				vertical-align: -3px;
+				margin-right: 3px;
+			}
+		}
+	}
+}
+/* end msg-box */

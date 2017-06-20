@@ -1,0 +1,137 @@
+// old 留作兼容  不要使用
+.line-overflow(@n:2) when (@n > 1) {
+    overflow:  hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
+}
+.line-overflow(@n:2) when (@n = 1) {
+    overflow:  hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//new
+.line-overflow-line(@n:1) {
+    overflow:  hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
+}
+
+.line-overflow-width(@width) {
+    overflow:  hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: @width;
+}
+
+
+.b-line(@n:1px;@color:#d6d6d6){
+	content: " ";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom :0;
+	width :100%;
+	height: @n;
+	background-color: @color;
+	-webkit-transform-origin :0 100%;
+	transform-origin :0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.t-line(@n:1px;@color:#d6d6d6){
+	content: " ";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: @n;
+	background-color: @color;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+.l-line(@n:1px;@color:#d6d6d6){
+	content: " ";
+	position :absolute;
+	left :0;
+	bottom: 0;
+	top :0;
+	width: @n;
+	height: 100%;
+	background-color: @color;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scaleX(0.5);
+	transform :scaleX(0.5);
+}
+
+.r-line(@n:1px;@color:#d6d6d6) {
+	content: " ";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: @n;
+	height: 100%;
+	background-color: @color;
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+	-webkit-transform: scaleX(0.5);
+	transform: scaleX(0.5);
+}
+
+
+
+.border-onePX(@borderRadius:0px;@borderColor:#bdbdbd;@borderSize:1px){
+    content: " ";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: @borderSize solid @borderColor;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    // transform: scale(.5) translate3d(@borderSize*-1, @borderSize*-1, 0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: @borderRadius*2;
+}
+
+.display-flex(@align:center){
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+    -ms-flex-align: @align;
+    -webkit-align-items: @align;
+    -webkit-box-align: @align;
+    align-items: @align;
+}
+.flex(@n){
+	-webkit-box-flex: @n;
+	-webkit-flex: @n;
+	-ms-flex: @n;
+	flex: @n;
+}
+
+.clearfix(){
+    &:after {
+        content:"";
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden
+    }
+}

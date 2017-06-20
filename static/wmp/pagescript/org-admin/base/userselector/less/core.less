@@ -1,0 +1,39 @@
+@import "@{static}/modules/base/less/variables";
+/* user-selector */
+.set-pos(@top:0,@right:0,@bottom:0,@left:0){
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
+}
+
+.hide {
+	display: none;
+}
+
+.user-selector {
+	overflow-y: scroll;
+	position: fixed;
+	.set-pos(0,0,0,0);
+	background-color: @bg-1;
+	z-index: 10;
+	.title-bar {
+		height: 88px;
+	}
+	.container {
+		padding-top: 88px;
+		padding-bottom: 0;
+	}
+	.item {
+		position: relative;
+		.add-btn {
+			position: absolute;	
+			.set-pos(0,15px,0,auto);
+			margin: auto 0;
+			width: 18px;
+			height: 18px;
+			background: no-repeat center center data-uri("@{static}/pagescript/org-admin/base/userselector/img/plus.png");
+			background-size: cover;
+		}
+	}
+}

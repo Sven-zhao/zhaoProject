@@ -1,0 +1,44 @@
+@import "@{static}/pagescript/org-admin/base/less/base";
+
+.icon-container {	
+    width: 65.625%;
+    margin: 40px auto 0;
+    position: relative;
+
+    .icon-org, .icon-member {
+		width: 38.096%; 
+		text-align: center;
+		display: block;
+		background: no-repeat top center;
+		background-size: contain;
+		span {
+			margin-top: 15px;
+			color: @f1;
+			font-size: 15px;
+			font-weight: bold;
+	    	display: inline-block;
+		}
+    }
+
+    .icon-member {
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+		background-image: data-uri("@{static}/pagescript/org-admin/org/landing/img/org.png");
+		&:active {
+			background-image: data-uri("@{static}/pagescript/org-admin/org/landing/img/org-pressed.png");
+		}
+    }
+
+    .icon-org {
+		background-image: data-uri("@{static}/pagescript/org-admin/org/landing/img/member.png");
+		&:active {
+			background-image: data-uri("@{static}/pagescript/org-admin/org/landing/img/member-pressed.png");
+		}
+    }
+
+	img {
+		width: 100%;
+    	display: block;
+	}
+}

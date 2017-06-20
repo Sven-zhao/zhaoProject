@@ -1,0 +1,116 @@
+@import "@{static}/modules/base/less/page";
+@import "@{static}/modules/base/less/buttons";
+@import "@{static}/pagescript/base/less/base";
+@import "@{static}/pagescript/userinfos/base/less/base";
+
+body {
+	background-color: @bg-2;
+}
+
+.modify_wrapper {
+	background: @bg-2;
+	.container {
+	padding-top: 15px;
+	}
+	.btn-color {
+	border: 1px solid @dc;
+	background-color: @bg-1;
+	color: @dc;
+	font-size: 15px;
+	}
+}
+.people-wrap {
+	position: relative;
+	background: @bg-1;
+	margin-bottom:10px;
+	.face-image {
+		display: inline-block;
+		position: relative;
+		width: 48px;
+		height: 48px;
+		border-radius: 48px;
+		background: no-repeat center center;
+		background-size: cover;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background: no-repeat center center data-uri("../img/photo-change.png");
+			background-size: cover;
+		}
+	}
+	.people-data{
+	position: absolute;	
+	top: 20px;
+	left: 75px;
+	right: 30px;
+	.position {
+	top: 15px;
+	right:0px;
+	}
+	.name, .other{		
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	}
+	.name {
+	color: @f1;
+	font-size: 15px;
+    font-weight: 700;
+	}
+	.other {
+	color: @f2;
+	font-size: 13px;
+	margin-top: 10px;
+	}
+	}
+	#top-25 {
+	top: 25px;
+	}
+	#top-30 {
+	top: 30px;
+	}
+
+}
+
+.glyphicon-color {
+	background-image: url(../img/img_arrow.png);
+	background-repeat: no-repeat;
+	background-size:9px 14px;
+	width: 9px;
+	height: 14px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.data-list {
+	>div {
+	background: @bg-1;
+	margin-bottom: 10px;
+	border-bottom: 1px solid @div;
+	border-top: 1px solid @div;
+	}
+
+	.padding-rt {
+    padding: 0 0 0 15px;
+	}
+	a {
+	display: block;
+	position:relative;
+	line-height: 45px;
+	height: 45px;
+	color: @f1;
+	font-size: 15px;
+	&:visited {
+	text-decoration: none;
+	}
+	&.has-boder {
+	border-bottom: 1px solid @bg-2;
+	}
+	}
+}

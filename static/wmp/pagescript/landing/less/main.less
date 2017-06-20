@@ -1,0 +1,58 @@
+@import "@{static}/modules/base/less/wx-normalize";
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/link";
+
+
+.img-container {
+	width: 100%;
+	overflow: hidden;
+	ul {
+	    padding: 0;
+	    margin: 0;
+	    position: relative;
+	    left: 0;
+	    top: 0;
+	    li {
+			list-style-type: none;
+	    	float: left;
+			img {
+				display: none;
+			}
+	    }
+	}
+}
+
+.bullet-container {
+	margin-top: 25px;
+	text-align: center;
+	display: none;
+	ul {
+		display: inline-block;
+	    padding: 0;
+	    margin: 0;
+	    li+li {
+	    	margin-left: 6px;
+	    }
+	    li {
+			list-style-type: none;
+			width: 6px;
+			height: 6px;
+			background-size: 100% 100%;
+			float: left;
+			&.bullet {
+				background-image: data-uri('../img/bullet.png');
+				&.bullet-selected {
+					background-image: data-uri('../img/bullet-selected.png');
+				} 	
+			}    	
+	    }		
+	}
+}
+
+.set-fixed-footer(15px,15px,35px);
+
+.fixed-footer {
+	.link {
+		margin-top: 20px;
+	}
+}

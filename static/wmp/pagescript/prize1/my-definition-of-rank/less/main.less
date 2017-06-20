@@ -1,0 +1,144 @@
+@import "@{static}/pagescript/prize1/base/less/base";
+@import "@{static}/modules/base/less/my-normalize";
+@import "@{static}/modules/ui/usertype/less/main";
+@import "@{static}/common/bootstrap-3.3.5/less/mixins/vendor-prefixes";
+
+@prize-base-img-url: "@{staticurl}/pagescript/prize1/base/img";
+
+html {
+	.backgroundImage(3);
+}
+
+.banner {
+	.ribbon_gold();
+	width: 318px;
+	margin: 34px auto 0;
+}
+
+.header {
+	.ribbon_purple();
+	margin-top: 20px;
+}
+
+.table-container {
+	margin: 0 16px 66px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 56px;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+	.rank-btn {
+		.btn();
+		margin-top: 6px;
+	}
+}
+
+.nominate {
+	width: 100%;
+	border-collapse: collapse;
+	thead {
+		width: 343px;
+		background-color: rgba(255, 255, 255, 0.1);
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+		th {
+			height: 38px;
+			font-weight: normal !important;
+		}
+	}
+
+	tbody {
+		tr {
+			position: relative;
+			a {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: red;
+				z-index: 1;
+			}
+		}
+		td {
+			position: relative;
+			text-align: center;
+			font-size: 16px;
+			height: 38px;
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: rgba(255, 255, 255, 0.1);
+				height: 1px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				.scaleY(0.5);
+			}
+		}
+	}
+}
+
+.finalists {
+	position: relative;
+	.golden-rect();
+	padding: 24px 10px;
+	margin: 0 19px;
+
+	table {
+		width: 100%;
+	}
+
+	.item {
+		position: relative;
+		text-align: center;
+		.avatar {
+			.avatar();
+			background-color: gray;
+		}
+		.name {
+			margin: 12px auto 0;
+			font-size: 15px;
+			line-height: 20px;
+			color: #000;
+			max-width: 82px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			height: 40px;
+		}
+		a:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: transparent;
+			z-index: 1;
+		}
+		.num {
+			font-size: 12px;
+			color: #8e8e8e;
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 23px;
+				height: 23px;
+				margin-right: 6px;
+				vertical-align: -6px;
+				background: url("@{prize-base-img-url}/icon-flame.png") no-repeat center center;
+				background-size: contain;
+			}
+		}
+	}
+}

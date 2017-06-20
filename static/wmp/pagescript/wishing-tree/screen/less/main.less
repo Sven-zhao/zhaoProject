@@ -1,0 +1,243 @@
+@import (inline) "@{static}/modules/base/less/reset.min.css";
+@assets: "@{staticurl}/pagescript/wishing-tree/screen";
+
+@font-face {
+	font-family: wishfont;
+	src: url("@{assets}/font/song.ttf");
+}
+
+.pre-cache {
+	display: none;
+}
+
+html {
+	height: 100%;
+	font-family: wishfont;
+	-webkit-font-smoothing: subpixel-antialiased;
+	user-select: none;
+	cursor: url("@{assets}/img/cursor.png"), auto;
+	.wrap {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		transition: 1s;
+		background: url("@{assets}/img/bg.jpg") no-repeat center center;
+		background-size: cover;
+		@blur-width: 50px;
+		&.blur {
+			filter: blur(@blur-width);
+			-webkit-filter: blur(@blur-width);
+		}
+	}
+}
+
+
+.card-container {
+	padding: 163px 0 0 188px;
+}
+
+.banner {
+	position: absolute;
+	width: 476px; 
+	height: 948px; 
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: 2s ease-in-out;
+
+	top: -160%;
+	// transform: scale(2,2);
+	filter: blur(20px);
+
+	&.show{
+		top: 160px;
+		transform: scale(1,1);
+		filter: blur(0);
+	}
+
+	&.up-down {
+		animation: up-down 2s ease-in-out 2s infinite alternate;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: unit(1110/2,px); 
+		height: unit(2164/2,px); 
+		background: url("@{assets}/img/banner-bg.png") no-repeat center center;
+		background-size: contain;
+	}
+
+	@keyframes up-down {
+		from {
+			transform: translateY(0px);
+		}
+		to {
+			transform: translateY(-40px);
+		}
+	}
+}
+
+.preview-wrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: fadeOut(#000,40%);
+}
+
+.preview {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 2240px;
+	height: 956px;
+	.slogan {
+		width: 2090px;
+		height: 140px;
+		background: url("../img/preview-slogan-bg.png") no-repeat center center;
+		background-size: contain;
+		margin: 0 auto 40px;
+	}
+	.main {
+		box-sizing: border-box;
+		padding: 148px 200px;
+		width: 2239px;
+		height: 774px;
+		background: url("../img/preview-bg.png") no-repeat center center;
+		background-size: contain;
+		color: #440303;
+		.title {
+			font-size: 80px;
+			text-align: center;
+			margin-bottom: 60px;
+		}
+		.content {
+			font-size: 60px;
+			text-align: justify;
+			line-height: 1.4;
+		}
+	}
+}
+
+video {
+	width: 1px;
+	height: 1px;
+}
+
+.monitor {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 100px;
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	color: fadeOut(#fff,80%);
+	font-size: 30px;
+
+	.state {
+		display: inline-block;
+		transition: 1s;
+		width: 98px;
+		height: 35px;
+		margin-top: 10px;
+		background: no-repeat center center;
+		background-size: contain;
+		background-image: url("@{staticurl}/pagescript/wishing-tree/base/img/icon-log.png");
+		opacity: 0;
+		&.play {
+			opacity: 1;
+		}
+		&.pause {
+			opacity: 0;
+		}
+	}
+}
+
+.card {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-bottom: 100px;
+	width: 192px; 
+	height: 382px;
+	padding-left: 66px;
+	margin-right: 103px;
+	letter-spacing: 4px;
+	font-size: 60px;
+	color: #000;
+	writing-mode: vertical-lr;
+	transform: translate(0,-3000px);
+	text-align: center;
+	&:nth-child(8n) {
+		margin-right: 0;
+	}
+	// cursor: pointer;
+	.content {
+		padding: 30px 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.preview-content {
+		display: none;
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 223px; 
+		height: 437px; 
+		background: url("@{assets}/img/card-bg.png") no-repeat center center;
+		background-size: 223px 437px;
+		z-index: -1;
+	}
+
+	// transition: 1s;
+
+	@keyframes hide {
+		from {
+			opacity: 1;
+			filter: blur(0);
+			// transform: translateY(0px);
+		}
+		to {
+			opacity: 0;
+			filter: blur(10px);
+			// transform: translate(0,3000px);
+		}
+	}
+
+	@keyframes show {
+		from {
+			transform: translate(0,-3000px);
+		}
+		to {
+			transform: translateY(0px);
+		}
+	}
+
+	&.hide {
+		// transform: translate(0,-3000px);
+		transform: translateY(0px);
+		animation: hide 2s forwards;
+	}
+
+	&.show {
+		opacity: 1;
+		filter: blur(0);
+		animation: show 2s forwards;
+	}
+}

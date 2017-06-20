@@ -1,0 +1,29 @@
+.loading {
+	margin-top: 10px;
+	-webkit-transform: scale(0,0);
+	&.show {
+		-webkit-transform: scale(1,1);
+	}
+	-webkit-transition: -webkit-transform 0.5s;
+	@-webkit-keyframes sbin {
+		from {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 28px;
+		height: 28px;		
+		margin: 0 auto;
+		background: no-repeat center center data-uri("@{static}/pagescript/org-admin/base/img/img-loading.png");
+		background-size: contain;
+		-webkit-animation: sbin 1s infinite linear;
+		-webkit-animation-fill-mode: both;
+	}
+}

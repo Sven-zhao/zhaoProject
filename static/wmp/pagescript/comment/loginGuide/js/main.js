@@ -1,0 +1,1 @@
+require(['wxapi.default.config']);

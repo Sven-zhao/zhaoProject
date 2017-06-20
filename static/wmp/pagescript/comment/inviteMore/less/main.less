@@ -1,0 +1,120 @@
+@import "@{static}/modules/base/less/btns";
+@import "@{static}/modules/base/less/profile";
+@import "@{static}/modules/ui/showMsg/less/complete";
+@import "@{static}/pagescript/comment/base/less/base";
+
+header {
+    box-sizing: border-box;
+    padding: 10px 15px 0;
+    height: 80px;
+    line-height: 80px;
+    background: data-uri('../img/img_header_bg.png') no-repeat center center;
+    background-size: cover;
+    .main-style {
+        color: @bg-1;
+        font-size: 15px;
+        text-shadow: 0 1px 1px fade(@bg-3, 50%);
+    }
+    .profile.profile-h {
+        line-height: 36px;
+        height: 36px;
+        .portrait {
+            width: 36px;
+            height: 36px;
+        }
+        .name {
+            .main-style();
+            max-width: 100%;
+        }
+    }
+    p {
+        margin:  5px auto 0;        
+    }
+    .text1, .text2 {
+        .main-style();
+    }
+    .text1 {
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 55px;
+            height: 22px;
+            background: data-uri('../img/img_comment_logo_yellow.png') no-repeat center center;
+            background-size: 100%;
+            vertical-align: -4px;
+        }
+    }
+}
+.container {
+    padding: 10px 15px 70px;
+}
+
+.invite-list-item {
+    display: none;
+    position: relative;
+    height: 70px;    
+    box-sizing: border-box;
+    padding-top: 15px;
+    .profile.profile-h {
+        padding: 0 18px 0 61px;
+        .portrait {
+            width: 48px;
+            height: 48px;
+        }
+        .name {
+            font-size: 15px;
+            color: @f1;
+            max-width: 100%;
+        }
+        .title {
+            font-size: 12px;
+            color: @f2;
+        }
+    }
+    .delete {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto 0;
+        padding: 5px 0 5px 5px;
+        width: 14px;
+        height: 14px;
+        background: data-uri('../img/btn_delete.png') no-repeat;
+        background-size: 100%;
+    }
+    hr {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    z-index: 10;
+    .btn {
+        width: 47.5%;
+        &#ignore-btn {
+            float: left;
+        }
+        &#submit-btn {
+            float: right;
+        }
+    }
+}
+
+.complete-msg-box {
+    .msg-container {
+        background-color: fade(@sc,90%);
+        .msg {
+            &:before {
+                background-image: data-uri("../img/img_check_success.png");
+            }
+        }
+    }
+}

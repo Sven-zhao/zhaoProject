@@ -1,0 +1,40 @@
+@import "@{static}/pagescript/opportunity/base/less/base";
+.tabs {
+	display: block;
+	font-size: .14rem;
+	background-color: #fff;
+	.half-border(fadeOut(#000,90%));
+	&:after {
+		bottom: -1px;
+	}
+	.tab {
+		display: inline-block;
+		height: .44rem;
+		line-height: .44rem;
+		color: #8c8582;
+		text-align: center;
+		[type="radio"] {
+			display: none;
+		}
+		&.active {
+			color: #5b5755;
+			font-weight: 600;
+			span {
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: .02rem;
+					background: @fawn;
+				}
+			}
+		}
+		span {
+			display: inline-block;
+			position: relative;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import "@{static}/modules/base/less/page";
+@import "@{static}/modules/base/less/buttons";
+@import "@{static}/pagescript/base/less/base";
+@import "@{static}/pagescript/userinfos/base/less/base";
+
+.tag-name {
+	margin: 0 21px 20px;
+	.form-control {
+		height: 40px;
+	}
+}
+
+.add-btn {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: no-repeat center center data-uri("../img/add.png");
+	background-size: cover;
+	vertical-align: -2px;
+}
+
+.confirm-btn {
+	color: @dc !important;
+}
+
+.del-window {
+	.confirm-btn {
+		color: @ac !important;
+   }	
+}
+
+#submit-btn {
+	.btn-fixed-bottom;
+}
+

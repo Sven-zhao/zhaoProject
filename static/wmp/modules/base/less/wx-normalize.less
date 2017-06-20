@@ -1,0 +1,182 @@
+@import "./variables";
+@import "./normalize";
+@import "@{static}/common/bootstrap-3.3.5/less/mixins/vendor-prefixes";
+
+//html tag start
+html {
+	background-color: @bg-1;
+}
+body {	
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1 {
+	color: @f1;
+	font-size: 15px;
+	font-weight: bold;
+	height: 15px;
+	line-height: 15px;
+	margin: 0;
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 3px;
+		height: 14px;
+		vertical-align: -1px;
+		background-color: @dc;
+		margin-right: 8px;
+	}
+	&+.help {
+		margin: 20px 0 0;
+		color: @f1;
+		font-size: 13px;
+	}
+}
+input, textarea {
+	background-color: @bg-1;
+	border: 1px solid @div;
+	border-radius: 0;
+	outline: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	resize: none;
+	&:focus {		
+		outline: none;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+	&::-webkit-input-placeholder {	
+		color: @f3;
+		font-size: 15px;
+	}
+	&[readonly] {
+		font-size: 15px;
+		color: @f3 !important;
+	}
+}
+input[type="text"], textarea, select {
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+}
+
+a {
+	text-decoration: none;
+}
+hr {
+	margin: 0;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid @div;
+}
+//html tag end
+
+
+
+//layout start
+.container {
+	position: relative;
+	padding: 15px 15px 0 15px;
+	z-index: 1;
+}
+.container-full {
+	background-color: @bg-2;
+}
+.container-block {	
+	background-color: @bg-1;
+}
+//layout end
+
+
+
+
+//header footer start
+.set-title-bar(@height,@bg-color) {
+	.title-bar,
+	.ios-fix {
+		padding: 15px 0 10px 15px;
+		left: 0;
+		right: 0;
+		background-color: @bg-color;
+		z-index: 10;
+		box-sizing: border-box;
+		height: @height;
+	}
+	.title-bar {
+		position: fixed;
+		top: 0;
+	}
+	.ios-fix {
+		position: absolute;
+		top: 0;
+	}
+
+	.container {
+		padding-top: @height;
+	}
+}
+.set-fixed-footer(@left: 15px, @right: 15px, @bottom: 15px) {	
+	.fixed-footer {
+		position: fixed;
+		left: @left;
+		right: @right;
+		bottom: @bottom;
+	}
+}
+.set-fixed-footer-width(@width: auto,  @left: 15px, @right: 15px, @bottom: 15px) {	
+	.fixed-footer {
+		position: fixed;
+		left: @left;
+		right: @right;
+		bottom: @bottom;
+		.container {
+			margin: 0 auto;
+			width: @width;
+		}
+	}
+}
+.set-fix-footer-list() {
+	.list-footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 5px 10px;
+		background-color: fadeOut(@bg-1,10%);
+		box-shadow: 0px -1px 2px 1px fadeOut(@bg-3,85%);
+	}
+	.container {
+		padding-bottom: 48px;
+	}
+}
+.footer {
+	padding: 0 15px;
+}
+//header footer end
+
+
+
+
+
+//common class start
+.clearfix {
+	&:after { 
+		content:""; 
+		display:block; 
+		height:0; 
+		visibility:hidden; 
+		clear:both; 
+	}
+} 
+.font-main {
+	color: @f1;
+	font-size: 15px;
+}
+.hide {
+	display: none;
+}
+//common class end
+
+//common function
+.percentage(@num1,@num2,@dim) {
+	@{dim}: percentage(@num1/@num2);
+}
+//common function end

@@ -1,0 +1,36 @@
+@import "../..//base/less/global";
+
+
+.qrcode-box{
+    margin: 0 auto;
+    border-radius: .08rem;
+    background-color: #fff;
+    padding: .34rem 0 .1rem;
+    width: 2.62rem;
+    text-align: center;
+    box-shadow: 0 2px 3px 0 @black-20;
+    position: relative;
+    .qrcode-pic{
+        margin: .1rem .56rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .qrcode-title-big{
+        color: @black-54;
+        font-weight: 500;
+        font-size: .14rem;
+        margin: .04rem;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 1.16rem/-4;
+        left:0;
+        right: 0;
+        margin: 0 auto;
+        width: .74rem/2;
+        height: 1.16rem/2;
+        background: url('@{staticurl}/pagescript/audioBless/base/img/qrcode-icon.png') no-repeat center center;
+        background-size: auto 100%;
+    }
+}
